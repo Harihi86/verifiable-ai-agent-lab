@@ -1,0 +1,1 @@
+# Observed on CPython 3.12 / macOS. Other platforms use pyproject.toml constraints.

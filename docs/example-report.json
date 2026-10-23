@@ -1,0 +1,39 @@
+{
+  "kind": "deterministic local fixtures; no live AI execution",
+  "treatment": "generated report excerpt; host paths and transient ids omitted",
+  "acceptance_sha256": "8ea141028da95f312d8434f167ef1ccfb6b9bbe31b440f75552f953b474d53f6",
+  "attempts": [
+    {
+      "outcome": "FAIL",
+      "reason": "A mandatory check failed",
+      "source_sha256": "304a06f9d746ae4e5201b0657222b3df36ca20c361f7edbde92af7c1e3c77157",
+      "source_integrity": true,
+      "review_kind": "static-source-review; not AI or human review",
+      "review_findings": [],
+      "checks": [
+        {
+          "name": "owner-acceptance",
+          "outcome": "FAIL",
+          "returncode": 1
+        }
+      ],
+      "raw_check_output": "test_empty_is_rejected (__main__.Acceptance.test_empty_is_rejected) ... FAIL\ntest_negative_and_singleton (__main__.Acceptance.test_negative_and_singleton) ... ok\ntest_ordinary (__main__.Acceptance.test_ordinary) ... ok\n\n======================================================================\nFAIL: test_empty_is_rejected (__main__.Acceptance.test_empty_is_rejected)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<local-workspace>/outputs/verifiable-ai-agent-lab/src/verifiable_agent_lab/acceptance_mean.py\", line 16, in test_empty_is_rejected\n    with self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nFAILED (failures=1)\n"
+    },
+    {
+      "outcome": "PASS",
+      "reason": "Configured technical checks passed for this source snapshot",
+      "source_sha256": "161cbd3d8417da8bc9e88869894e258e9483f1228678e7046d36b9f5f7f34a65",
+      "source_integrity": true,
+      "review_kind": "static-source-review; not AI or human review",
+      "review_findings": [],
+      "checks": [
+        {
+          "name": "owner-acceptance",
+          "outcome": "PASS",
+          "returncode": 0
+        }
+      ],
+      "raw_check_output": "test_empty_is_rejected (__main__.Acceptance.test_empty_is_rejected) ... ok\ntest_negative_and_singleton (__main__.Acceptance.test_negative_and_singleton) ... ok\ntest_ordinary (__main__.Acceptance.test_ordinary) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n"
+    }
+  ]
+}
