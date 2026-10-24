@@ -1,0 +1,40 @@
+
+  ## Role: codex-probe
+  Read-only probe role used to validate Herdr-native dispatch and memory capture
+
+  You are a read-only reviewer. Do not create, modify, delete, or move any file. Do not run shell commands.
+  Do not use web search or subagents. Keep answers short.
+
+  Tool guidance from the role definition (advisory; Herdr and the harness decide actual permissions): Read
+
+  ## Task
+  Read README.md in the current directory and reply with exactly three short bullet points that summarize it. Then
+  stop.
+
+  When finished, summarize what you changed and what remains, then stop.
+
+
+• I’ll read README.md and summarize it in three short bullets.
+
+• Called Read README.md
+  └ - It contains one Python module, `src/hello.py`, that prints a greeting.
+    - It has no dependencies and no tests.
+    - It will be deleted after the validation run.
+    + Show details
+
+• • Temporary repository for validating Herdr-native agent dispatch.
+  • src/hello.py prints a greeting; no dependencies or tests.
+  • Intended for deletion after validation. No files changed; no review work remains.
+
+  Worked for 27s • 22:45
+
+
+  Approaching rate limits
+  Switch to gpt-6-luna for lower credit usage?
+
+
+› 1. Switch to gpt-6-luna                   Fast and affordable model for easier tasks.
+  2. Keep current model
+  3. Keep current model (never show again)  Hide future rate limit reminders about switching models
+
+  enter select · esc back

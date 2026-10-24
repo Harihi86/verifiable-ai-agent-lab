@@ -63,6 +63,22 @@ Full command transcripts with exit codes are in [`reports/07-test-runs.md`](repo
 
 Not verified for Codex: default daemon mode (the app's shared app-server), npm/standalone-installer distributions.
 
+## Integration candidate (built Herdr branch)
+
+Artifacts are under [`integration-candidate/`](integration-candidate/); its `SANITIZATION-LOG.md` lists every exported
+file. Commands are in `INTEGRATION-CANDIDATE.md` §3.
+
+| Claim | Artifact | Command | Observed | Class |
+|---|---|---|---|---|
+| The candidate builds on Windows without MSVC | `evidence/build/build-gnu-release-*.log` | `cargo zigbuild --release --target x86_64-pc-windows-gnu --locked` | exit 0; final binary sha256 `c7710ce4…` | offline verification |
+| fmt and clippy pass | `evidence/build/lint-gnu.log` | `cargo fmt --check`; `cargo-zigbuild clippy --all-targets --locked -- -D warnings` | both exit 0 | offline verification |
+| Herdr's Rust suite passes on the candidate sources | `evidence/rust-tests/test-isolated-final.json`, `env-dependent-test-with-variable-unset.txt` | `run_isolated_tests.py` (one process per test, sandboxed profile) | 3448/3449; the remaining test passes with `NoDefaultCurrentDirectoryInExePath` unset | offline verification |
+| Maintenance tests pass | `evidence/rust-tests/maintenance-tests-final.log` | `just test` Python modules | 150 run, 5 skipped, OK | offline verification |
+| Two agent dialogs that v0.9.5 calls idle are blockers on the candidate | `evidence/detection-fixtures/` | `test_fixtures.py` with `agent explain --file` | v0.9.5: Grok trust dialog and Codex model picker idle; candidate: all 5 as expected | offline verification |
+| Backend suites (plugin, plugin lifecycle, dispatch, asset gate) | `evidence/backend/{v0.9.5,candidate}/` | `integration/test_*_backend.py` | 19/19, 23/23, 9/9, 12/12 on both binaries | tested integration candidate |
+| Install, upgrade, kill and restart, rollback, uninstall | `evidence/lifecycle/candidate-lifecycle.json` | `tools/test_candidate_lifecycle.py` | 22/22 | tested integration candidate |
+| Real agents under Herdr on the candidate | `evidence/real-agent/*.json` | `validate_real_grok.py --kind grok/codex/claude` | Grok 14/14, Codex `--no-daemon` 14/14 (picker blocked live), Claude Code 14/14; Codex default daemon mode not usable | real-agent verification |
+
 ## Isolation
 
 | Claim | Artifact | Command | Observed | Class |

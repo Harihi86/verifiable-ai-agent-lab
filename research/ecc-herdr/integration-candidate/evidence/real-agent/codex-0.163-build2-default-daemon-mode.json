@@ -1,0 +1,123 @@
+{
+  "session": "realcodex-20261024-225648-b0cd1a",
+  "root": "C:\\Herdr-dev\\integration\\runtime\\sessions\\realcodex-20261024-225648-b0cd1a",
+  "kind": "codex",
+  "checks": {
+    "agent_resolves_outside_production_dirs": true,
+    "server_ready": true,
+    "plugin_link_exit": 0,
+    "workspace_created": true,
+    "start_reported_blocked_or_not_ready_when_trust_dialog_shown": true,
+    "agent_start_reached_idle": false,
+    "detected_kind_matches": false
+  },
+  "policy_actions": [],
+  "screens": {
+    "00-after-agent-start": "PS C:\\Herdr-dev\\integration\\runtime\\sessions\\realcodex-20261024-225648-b0cd1a\\tmp\\throwaway-repo> if((Get-Command codex\n -ErrorAction SilentlyContinue).CommandType -eq 'ExternalScript'){& codex '--sandbox' read-only}else{Start-Process -Fil\nePath codex -ArgumentList '--sandbox read-only' -NoNewWindow -Wait}\nError: this CLI has no complete local package; install a packaged Codex CLI or use the standalone installer\nTo work without the background server, rerun the same command with --no-daemon (including resume or fork and its argume\nnts).\nPS C:\\Herdr-dev\\integration\\runtime\\sessions\\realcodex-20261024-225648-b0cd1a\\tmp\\throwaway-repo>\n",
+    "99-final": "PS C:\\Herdr-dev\\integration\\runtime\\sessions\\realcodex-20261024-225648-b0cd1a\\tmp\\throwaway-repo> if((Get-Command codex\n -ErrorAction SilentlyContinue).CommandType -eq 'ExternalScript'){& codex '--sandbox' read-only}else{Start-Process -Fil\nePath codex -ArgumentList '--sandbox read-only' -NoNewWindow -Wait}\nError: this CLI has no complete local package; install a packaged Codex CLI or use the standalone installer\nTo work without the background server, rerun the same command with --no-daemon (including resume or fork and its argume\nnts).\nPS C:\\Herdr-dev\\integration\\runtime\\sessions\\realcodex-20261024-225648-b0cd1a\\tmp\\throwaway-repo>\n"
+  },
+  "manifest_override": null,
+  "pane_path_prepend": "<USERPROFILE>\\AppData\\Local\\OpenAI\\Codex\\bin\\<package-id>",
+  "agent": {
+    "executable": "codex",
+    "resolved": "<USERPROFILE>\\AppData\\Local\\OpenAI\\Codex\\bin\\<package-id>\\codex.EXE",
+    "where": [
+      "<USERPROFILE>\\AppData\\Local\\OpenAI\\Codex\\bin\\<package-id>\\codex.exe"
+    ],
+    "version": "codex-cli 0.163.0-alpha.11.2"
+  },
+  "agent_home": "<USERPROFILE>\\.codex",
+  "plan_agent_start_argv": [
+    "agent",
+    "start",
+    "codex-probe",
+    "--kind",
+    "codex",
+    "--pane",
+    "{pane_id}",
+    "--timeout",
+    "120000",
+    "--",
+    "--sandbox",
+    "read-only"
+  ],
+  "plugin_state_dir": "C:\\Herdr-dev\\integration\\runtime\\sessions\\realcodex-20261024-225648-b0cd1a\\xdg-state\\herdr\\plugins\\research.agent-memory",
+  "pane_id": "w1:p1",
+  "step2": {
+    "ok": false,
+    "exit_codes": [
+      1
+    ],
+    "stderr": "{\"error\":{\"code\":\"timeout\",\"message\":\"timed out waiting for agent startup\"},\"id\":\"cli:agent:start\"}\n",
+    "elapsed_ms": 120193.84080002783
+  },
+  "status_right_after_agent_start": null,
+  "aborted_reason": "startup: timeout waiting for idle (last status None)",
+  "timings_ms": {
+    "start_to_ready": 301548.75449999236
+  },
+  "detected_agent_label": null,
+  "failed_checks": [
+    "agent_start_reached_idle",
+    "detected_kind_matches"
+  ],
+  "server_exit": 0,
+  "agent_home_changes": {
+    "added_count": 0,
+    "modified_count": 11,
+    "removed_count": 3,
+    "note": "file names omitted for publication; classes are described in research/14 and research/15",
+    "by_top_level_counts": {
+      ".codex-global-state.json": 1,
+      ".codex-global-state.json.bak": 1,
+      "goals_1.sqlite-wal": 1,
+      "logs_2.sqlite": 1,
+      "logs_2.sqlite-wal": 1,
+      "models_cache.json": 1,
+      "sessions": 2,
+      "state_5.sqlite-wal": 1,
+      "thread_history_1.sqlite": 1,
+      "thread_history_1.sqlite-wal": 1
+    }
+  },
+  "timeline": [
+    {
+      "t_ms": 5836.0,
+      "kind": "step",
+      "step": "2-agent-start"
+    },
+    {
+      "t_ms": 6944.5,
+      "kind": "herdr-event",
+      "event": "pane_agent_detected",
+      "agent": "codex",
+      "status": null
+    },
+    {
+      "t_ms": 7345.9,
+      "kind": "herdr-event",
+      "event": "pane.agent_status_changed",
+      "agent": "codex",
+      "status": "idle"
+    },
+    {
+      "t_ms": 7346.0,
+      "kind": "herdr-event",
+      "event": "pane_agent_detected",
+      "agent": "codex",
+      "status": null
+    },
+    {
+      "t_ms": 7646.8,
+      "kind": "herdr-event",
+      "event": "pane.agent_status_changed",
+      "agent": null,
+      "status": "unknown"
+    },
+    {
+      "t_ms": 307384.7,
+      "kind": "abort",
+      "reason": "startup: timeout waiting for idle (last status None)"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "session": "gate-20261024-230025-47bfd9",
+  "checks": {
+    "server_ready": true,
+    "review_exit": true,
+    "review_allows_plugin": true,
+    "install_without_approval_refused": true,
+    "install_with_wrong_digest_refused": true,
+    "install_after_modification_refused": true,
+    "approved_install_exit": true,
+    "plugin_linked_through_herdr": true,
+    "every_attempt_logged": true,
+    "only_matching_approval_marked_approved": true,
+    "approved_record_names_reviewed_digest": true,
+    "plugin_unlink_exit": true
+  },
+  "review": {
+    "decision": "allow",
+    "report_sha256": "0abefc17a921784090a2a77868bbad12c37310b0523a03fd0129b9bd22b915ac",
+    "content_sha256": "2d0d32a8a6cf8c3118958bf57a8fa4a34e839ee427c9f99a1e679ea39ecd6719"
+  },
+  "failed": []
+}

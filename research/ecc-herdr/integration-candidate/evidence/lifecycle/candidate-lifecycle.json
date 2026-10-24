@@ -1,0 +1,37 @@
+{
+  "checks": {
+    "installs_verified": true,
+    "candidate_has_verified_conpty_layout": true,
+    "release_ready": true,
+    "release_classifies_trust_dialog_as_idle": true,
+    "plugin_linked_on_release": true,
+    "occupant_started_on_release": true,
+    "capture_on_release": true,
+    "candidate_ready_after_upgrade": true,
+    "candidate_classifies_trust_dialog_as_blocked": true,
+    "workspace_restored_after_upgrade": true,
+    "plugin_still_linked_after_upgrade": true,
+    "memories_intact_after_upgrade": true,
+    "candidate_ready_after_kill": true,
+    "workspace_restored_after_kill": true,
+    "plugin_recovery_ran_after_kill": true,
+    "release_ready_after_rollback": true,
+    "rollback_serves_release_behaviour": true,
+    "workspace_restored_after_rollback": true,
+    "memories_intact_after_rollback": true,
+    "active_build_after_rollback": true,
+    "integration_env_removed": true,
+    "session_state_removed": true
+  },
+  "stages": {
+    "release": {
+      "binary": "C:\\Herdr-dev\\integration\\env-test\\installs\\v0.9.5\\herdr.exe",
+      "sha256": "cd877c8744296f4a38a2703bf13cf11728973649ec54959959c4587ffe5368b2"
+    },
+    "candidate": {
+      "binary": "C:\\Herdr-dev\\integration\\env-test\\installs\\candidate\\herdr.exe",
+      "sha256": "c7710ce439824c4c3063f75cb3681da240b3bbe2a8c07437b94a80bfe986bbe8"
+    }
+  },
+  "failed": []
+}

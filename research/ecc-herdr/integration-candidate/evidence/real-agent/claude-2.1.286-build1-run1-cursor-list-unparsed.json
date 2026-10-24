@@ -1,0 +1,108 @@
+{
+  "session": "realclaude-20261024-224954-5cc7e3",
+  "root": "C:\\Herdr-dev\\integration\\runtime\\sessions\\realclaude-20261024-224954-5cc7e3",
+  "kind": "claude",
+  "checks": {
+    "agent_resolves_outside_production_dirs": true,
+    "server_ready": true,
+    "plugin_link_exit": 0,
+    "workspace_created": true,
+    "start_reported_blocked_or_not_ready_when_trust_dialog_shown": true,
+    "agent_start_reached_idle": false,
+    "detected_kind_matches": true
+  },
+  "policy_actions": [],
+  "screens": {
+    "00-after-agent-start": "PS C:\\Herdr-dev\\integration\\runtime\\sessions\\realclaude-20261024-224954-5cc7e3\\tmp\\throwaway-repo> if((Get-Command clau\nde -ErrorAction SilentlyContinue).CommandType -eq 'ExternalScript'){& claude '--model' haiku '--setting-sources' projec\nt '--disallowedTools' Bash Edit Write NotebookEdit WebFetch WebSearch '--strict-mcp-config'}else{Start-Process -FilePat\nh claude -ArgumentList '--model haiku --setting-sources project --disallowedTools Bash Edit Write NotebookEdit WebFetch\n WebSearch --strict-mcp-config' -NoNewWindow -Wait}\n\n───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n Accessing workspace:\n\n C:\\Herdr-dev\\integration\\runtime\\sessions\\realclaude-20261024-224954-5cc7e3\\tmp\\throwaway-repo\n\n Quick safety check: Is this a project you created or one you trust? (Like your own code, a well-known open source\n project, or work from your team). If not, take a moment to review what's in this folder first.\n\n Claude Code'll be able to read, edit, and execute files here.\n\n Security guide\n\n ❯ No, exit\n   Yes, I trust this folder\n\n Enter to confirm · Esc to cancel\n",
+    "01-startup-blocked": "PS C:\\Herdr-dev\\integration\\runtime\\sessions\\realclaude-20261024-224954-5cc7e3\\tmp\\throwaway-repo> if((Get-Command clau\nde -ErrorAction SilentlyContinue).CommandType -eq 'ExternalScript'){& claude '--model' haiku '--setting-sources' projec\nt '--disallowedTools' Bash Edit Write NotebookEdit WebFetch WebSearch '--strict-mcp-config'}else{Start-Process -FilePat\nh claude -ArgumentList '--model haiku --setting-sources project --disallowedTools Bash Edit Write NotebookEdit WebFetch\n WebSearch --strict-mcp-config' -NoNewWindow -Wait}\n\n───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n Accessing workspace:\n\n C:\\Herdr-dev\\integration\\runtime\\sessions\\realclaude-20261024-224954-5cc7e3\\tmp\\throwaway-repo\n\n Quick safety check: Is this a project you created or one you trust? (Like your own code, a well-known open source\n project, or work from your team). If not, take a moment to review what's in this folder first.\n\n Claude Code'll be able to read, edit, and execute files here.\n\n Security guide\n\n ❯ No, exit\n   Yes, I trust this folder\n\n Enter to confirm · Esc to cancel\n",
+    "99-final": "PS C:\\Herdr-dev\\integration\\runtime\\sessions\\realclaude-20261024-224954-5cc7e3\\tmp\\throwaway-repo> if((Get-Command clau\nde -ErrorAction SilentlyContinue).CommandType -eq 'ExternalScript'){& claude '--model' haiku '--setting-sources' projec\nt '--disallowedTools' Bash Edit Write NotebookEdit WebFetch WebSearch '--strict-mcp-config'}else{Start-Process -FilePat\nh claude -ArgumentList '--model haiku --setting-sources project --disallowedTools Bash Edit Write NotebookEdit WebFetch\n WebSearch --strict-mcp-config' -NoNewWindow -Wait}\n\n───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n Accessing workspace:\n\n C:\\Herdr-dev\\integration\\runtime\\sessions\\realclaude-20261024-224954-5cc7e3\\tmp\\throwaway-repo\n\n Quick safety check: Is this a project you created or one you trust? (Like your own code, a well-known open source\n project, or work from your team). If not, take a moment to review what's in this folder first.\n\n Claude Code'll be able to read, edit, and execute files here.\n\n Security guide\n\n ❯ No, exit\n   Yes, I trust this folder\n\n Enter to confirm · Esc to cancel\n"
+  },
+  "manifest_override": null,
+  "pane_path_prepend": null,
+  "agent": {
+    "executable": "claude",
+    "resolved": "<USERPROFILE>\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe\\claude.EXE",
+    "where": [
+      "<USERPROFILE>\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe\\claude.exe"
+    ],
+    "version": "2.1.286 (Claude Code)"
+  },
+  "agent_home": "<USERPROFILE>\\.claude",
+  "plan_agent_start_argv": [
+    "agent",
+    "start",
+    "claude-probe",
+    "--kind",
+    "claude",
+    "--pane",
+    "{pane_id}",
+    "--timeout",
+    "120000",
+    "--",
+    "--model",
+    "haiku",
+    "--setting-sources",
+    "project",
+    "--disallowedTools",
+    "Bash",
+    "Edit",
+    "Write",
+    "NotebookEdit",
+    "WebFetch",
+    "WebSearch",
+    "--strict-mcp-config"
+  ],
+  "plugin_state_dir": "C:\\Herdr-dev\\integration\\runtime\\sessions\\realclaude-20261024-224954-5cc7e3\\xdg-state\\herdr\\plugins\\research.agent-memory",
+  "pane_id": "w1:p1",
+  "step2": {
+    "ok": false,
+    "exit_codes": [
+      1
+    ],
+    "stderr": "{\"error\":{\"code\":\"agent_not_ready\",\"message\":\"agent claude-probe is blocked during startup and is not ready for prompts\"},\"id\":\"cli:agent:start\"}\n",
+    "elapsed_ms": 5033.464799984358
+  },
+  "status_right_after_agent_start": "blocked",
+  "timings_ms": {
+    "start_to_ready": 5387.790500011761
+  },
+  "detected_agent_label": "claude",
+  "failed_checks": [
+    "agent_start_reached_idle"
+  ],
+  "aborted_reason": "startup: unapprovable or unrecognised dialog (options=[])",
+  "server_exit": 0,
+  "agent_home_changes": {
+    "added_count": 0,
+    "modified_count": 0,
+    "removed_count": 0,
+    "note": "file names omitted for publication; classes are described in research/14 and research/15",
+    "by_top_level_counts": {}
+  },
+  "timeline": [
+    {
+      "t_ms": 2042.2,
+      "kind": "step",
+      "step": "2-agent-start"
+    },
+    {
+      "t_ms": 3754.3,
+      "kind": "herdr-event",
+      "event": "pane_agent_detected",
+      "agent": "claude",
+      "status": null
+    },
+    {
+      "t_ms": 7099.8,
+      "kind": "herdr-event",
+      "event": "pane.agent_status_changed",
+      "agent": "claude",
+      "status": "blocked"
+    },
+    {
+      "t_ms": 7430.0,
+      "kind": "abort",
+      "reason": "startup: unapprovable or unrecognised dialog (options=[])"
+    }
+  ]
+}

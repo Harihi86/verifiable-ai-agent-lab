@@ -1,0 +1,22 @@
+{
+  "session": "dispatch-20261024-223146-7195b7",
+  "checks": {
+    "server_ready": true,
+    "plan_has_grok_agent_start": true,
+    "plan_no_codex": true,
+    "all_steps_ok": true,
+    "five_steps_ran": true,
+    "pane_captured": true,
+    "simulated_agent_visible": true,
+    "read_step_has_prompt_echo": true,
+    "handoff_written_to_vault": true
+  },
+  "step_timings_ms": {
+    "1": 215.5,
+    "2": 2781.2,
+    "3": 360.1,
+    "4": 334.2,
+    "5": 570.2
+  },
+  "failed": []
+}

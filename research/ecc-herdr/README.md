@@ -43,11 +43,29 @@ production checkout that was never modified.
 | Manifest compatibility fix (`trust_directory_dialog_blocked`, `Ctrl+x:shortcuts` footer) | offline verification (`agent explain --file`, upstream validator) + real-agent verification; **proposed integration** upstream (commit `5302348e` on the source branch) | `prototypes/herdr-dispatch/manifests/grok.toml`, `reports/14 §3` |
 | Memory-capture title fix (terminal chrome filter, Grok and Codex footers), pipe-client shutdown fix, executor timeout derived from the step's own `--timeout` | tested prototype updates | `prototypes/herdr-agent-memory/src/lib/summarize.js`, `prototypes/common/herdr_socket.py`, `prototypes/herdr-dispatch/herdr_dispatch/executor.py` |
 | Proposed Herdr core change: `integration status` should re-validate the Claude `settings.json` hook entry | proposed integration | `reports/13 §3` |
-| Codex default daemon mode and npm/standalone distributions; Claude Code, Cursor, Gemini under the same validation | **not verified** | — |
+| Codex default daemon mode and npm/standalone distributions; Claude Code, Cursor, Gemini under the same validation | **not verified** in the research snapshot; later runs are recorded in [`integration-candidate/`](integration-candidate/) | — |
 | Production-ready functionality | **none** | — |
 
 Nothing in this track was merged into Herdr, published as a release, installed globally, or run against a production
 Herdr profile.
+
+## Integration candidate (follow-up)
+
+[`integration-candidate/`](integration-candidate/) records the next step: the three prototypes moved into a Herdr
+development branch (`integration/ecc-candidate`, twelve commits on v0.9.5) and tested there as a controlled
+integration candidate. Unlike the research snapshot, this step built Herdr from source with a workspace-local
+toolchain (Rust 1.96.1, Zig 0.16.0, cargo-zigbuild, Windows GNU target).
+
+| Item | Class | Where |
+|---|---|---|
+| Herdr's own Rust suite on the candidate sources, one process per test | 3448 of 3449 pass; the one failure depends on an environment variable and passes with it unset | `integration-candidate/evidence/rust-tests/` |
+| Grok 1.0.67 trust dialog and Codex 0.163 shared model picker classified as blockers | offline verification (fixtures fail on v0.9.5, pass on the candidate) + real-agent verification | `integration-candidate/evidence/detection-fixtures/`, `evidence/real-agent/` |
+| Agent memory, asset gate and dispatch on a disposable server | tested integration candidate (backend suites pass on v0.9.5 and the candidate) | `integration-candidate/evidence/backend/` |
+| Install, upgrade, abnormal termination, rollback, uninstall in a dedicated environment | tested (22/22) | `integration-candidate/evidence/lifecycle/` |
+| Grok Build 1.0.67, Codex 0.163 `--no-daemon`, Claude Code 2.1.286 under Herdr | **real-agent verification**, one configuration each | `integration-candidate/INTEGRATION-CANDIDATE.md` §4 |
+| Codex default daemon mode with the desktop-app CLI | tested: not usable (the CLI requires a packaged install) | same |
+| Cursor | **not verified** (`cursor-agent` not installed) | — |
+| Production-ready functionality | **none** | — |
 
 ## Reading order
 
@@ -59,6 +77,7 @@ Herdr profile.
 4. [`EVIDENCE-INDEX.md`](EVIDENCE-INDEX.md) — claim → artifact → command → class.
 5. [`SECURITY-FINDINGS.md`](SECURITY-FINDINGS.md) and [`LAB-INTEGRATION-POINTS.md`](LAB-INTEGRATION-POINTS.md).
 6. [`ROADMAP.md`](ROADMAP.md) — remaining validation and integration work.
+7. [`integration-candidate/INTEGRATION-CANDIDATE.md`](integration-candidate/INTEGRATION-CANDIDATE.md) — the built and tested integration candidate.
 
 ## Licensing and attribution
 

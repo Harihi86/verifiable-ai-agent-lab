@@ -1,0 +1,34 @@
+{
+  "session": "lifecycle-20261024-223122-6097cb",
+  "binary": "C:\\Herdr-dev\\runtime\\bin\\herdr-0.9.5\\herdr.exe",
+  "herdr_version": "herdr 0.9.5",
+  "checks": {
+    "server_ready": true,
+    "link_exit": 0,
+    "first_capture_written": true,
+    "provenance_manifest_written": true,
+    "restart_ready": true,
+    "startup_recovery_report_written": true,
+    "startup_recovery_verified_ok": true,
+    "workspace_restored_after_restart": true,
+    "startup_hook_logged": true,
+    "memories_persist_across_restart": true,
+    "restart_after_kill_ready": true,
+    "stale_tmp_removed_on_startup": true,
+    "memories_persist_after_kill": true,
+    "workspace_restored_after_kill": true,
+    "upgrade_link_exit": 0,
+    "upgrade_version_visible": true,
+    "upgrade_preserves_state_and_captures": true,
+    "recall_sees_old_and_new": true,
+    "rollback_link_exit": 0,
+    "rollback_version_visible": true,
+    "rollback_state_intact": true,
+    "uninstall_unregistered": true,
+    "uninstall_state_removed": true
+  },
+  "timings_ms": {
+    "clean_restart": 3988.186099973973
+  },
+  "failed": []
+}

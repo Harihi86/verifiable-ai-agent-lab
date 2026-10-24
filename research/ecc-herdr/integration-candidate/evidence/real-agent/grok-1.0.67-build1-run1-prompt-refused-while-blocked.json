@@ -1,0 +1,172 @@
+{
+  "session": "realgrok-20261024-223836-82db81",
+  "root": "C:\\Herdr-dev\\integration\\runtime\\sessions\\realgrok-20261024-223836-82db81",
+  "kind": "grok",
+  "checks": {
+    "agent_resolves_outside_production_dirs": true,
+    "server_ready": true,
+    "plugin_link_exit": 0,
+    "workspace_created": true,
+    "start_reported_blocked_or_not_ready_when_trust_dialog_shown": true,
+    "agent_start_reached_idle": true,
+    "detected_kind_matches": true,
+    "prompt_turn_settled": true,
+    "agent_read_ok": true,
+    "agent_answer_has_bullets": false,
+    "handoff_ok": true,
+    "memory_plugin_captured_agent": true,
+    "recall_includes_capture_or_handoff": false
+  },
+  "policy_actions": [
+    {
+      "phase": "turn",
+      "action": "send key 'y' for option 'Yes, proceed'",
+      "dialog": "trust"
+    }
+  ],
+  "screens": {
+    "00-after-agent-start": "",
+    "01-after-prompt-wait": "\n  ≡ master C:\\H\\i\\r\\s\\r\\tmp\\throwaway-repo\n\n\n\n\n\n\n\n\n                                     Do you trust the contents of this directory?\n             C:\\Herdr-dev\\integration\\runtime\\sessions\\realgrok-20261024-223836-82db81\\tmp\\throwaway-repo\n\n                               Grok Build may run or modify contents in this directory,\n                                                posing security risks.\n\n                                             Yes, proceed                 y\n                                             No, quit                     n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n                                                                                                   Grok Build  1.0.67\n",
+    "02-turn-blocked": "\n  ≡ master C:\\H\\i\\r\\s\\r\\tmp\\throwaway-repo\n\n\n\n\n\n\n\n\n                                     Do you trust the contents of this directory?\n             C:\\Herdr-dev\\integration\\runtime\\sessions\\realgrok-20261024-223836-82db81\\tmp\\throwaway-repo\n\n                               Grok Build may run or modify contents in this directory,\n                                                posing security risks.\n\n                                             Yes, proceed                 y\n                                             No, quit                     n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n                                                                                                   Grok Build  1.0.67\n",
+    "99-final": "\n  ≡ master C:\\H\\i\\r\\s\\r\\tmp\\throwaway-repo\n\n\n\n\n   ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────╮\n   │                                                                                                               │\n   │  Grok Build  1.0.67                                                                                           │\n   │                                                                                                               │\n   │  Tool Call Density (v1.0.52)                                                                                  │\n   │  Choose how much of each tool call you see with /density. Don't see it? Run grok update!                      │\n   │                                                                                                               │\n   │  New worktree                                                                                         ctrl+w  │\n   │  Resume session                                                                                       ctrl+r  │\n   │  Changelog                                                                                                    │\n   │  Quit                                                                                                 ctrl+q  │\n   │                                                                                                               │\n   ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n\n\n\n\n\n\n\n\n\n\n  Help improve Grok                                                                                [Opt out] [Opt in]\n  Off by default. Opt-in to allow SpaceXAI to retain coding data, e.g., prompts, traces, &\n  metrics, for training and debugging purposes. Change anytime via settings.\n  Read Terms and Privacy Policy.\n\n  ╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮\n  │ >                                                                                                               │\n  ╰─────────────────────────────────────────────────────────────────────────────────────────────── Grok 4.7 (high) ─╯\n"
+  },
+  "manifest_override": null,
+  "pane_path_prepend": null,
+  "agent": {
+    "executable": "grok",
+    "resolved": "<USERPROFILE>\\.grok\\bin\\1.0.67\\grok.EXE",
+    "where": [
+      "<USERPROFILE>\\.grok\\bin\\1.0.67\\grok.exe"
+    ],
+    "version": "grok 1.0.67 (2fe064390d07)"
+  },
+  "agent_home": "<USERPROFILE>\\.grok",
+  "plan_agent_start_argv": [
+    "agent",
+    "start",
+    "grok-probe",
+    "--kind",
+    "grok",
+    "--pane",
+    "{pane_id}",
+    "--timeout",
+    "120000",
+    "--",
+    "--no-subagents",
+    "--disable-web-search",
+    "--max-turns",
+    "3"
+  ],
+  "plugin_state_dir": "C:\\Herdr-dev\\integration\\runtime\\sessions\\realgrok-20261024-223836-82db81\\xdg-state\\herdr\\plugins\\research.agent-memory",
+  "pane_id": "w1:p1",
+  "step2": {
+    "ok": true,
+    "exit_codes": [
+      0
+    ],
+    "stderr": "",
+    "elapsed_ms": 10345.144699967932
+  },
+  "status_right_after_agent_start": "idle",
+  "timings_ms": {
+    "start_to_ready": 11025.861000001896,
+    "prompt_to_settled": 4065.8796000061557
+  },
+  "detected_agent_label": "grok",
+  "step3": {
+    "ok": false,
+    "exit_codes": [
+      1
+    ],
+    "stderr": "{\"error\":{\"code\":\"agent_blocked\",\"message\":\"agent grok-probe is blocked and requires interactive input\"},\"id\":\"cli:agent:prompt\"}\n",
+    "elapsed_ms": 492.3875000094995
+  },
+  "agent_read_tail": "  ≡ master C:\\H\\i\\r\\s\\r\\tmp\\throwaway-repo   ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────╮   │                                                                                                               │   │  Grok Build  1.0.67                                                                                           │   │                                                                                                               │   │  Tool Call Density (v1.0.52)                                                                                  │\n   │  Choose how much of each tool call you see with /density. Don't see it? Run grok update!                      │\n   │                                                                                                               │   │  New worktree                                                                                         ctrl+w  │\n   │  Resume session                                                                                       ctrl+r  │\n   │  Changelog                                                                                                    │   │  Quit                                                                                                 ctrl+q  │\n   │                                                                                                               │   ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯  Help improve Grok                                                                                [Opt out] [Opt in]  Off by default. Opt-in to allow SpaceXAI to retain coding data, e.g., prompts, traces, &  metrics, for training and debugging purposes. Change anytime via settings.  Read Terms and Privacy Policy.  ╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮  │ >                                                                                                               │\n  ╰─────────────────────────────────────────────────────────────────────────────────────────────── Grok 4.7 (high) ─╯\n",
+  "agent_read_chars": 2223,
+  "memory_doc_head": "---\nschema: \"herdr.agent-memory.v1\"\nid: \"mem_mvmi8g00-e4673e71\"\ntitle: \"grok settled (idle) in w1:p1:    │  Changelog\"\nkind: \"context\"\nscope: \"project\"\ntrust: \"unreviewed\"\nstatus: \"active\"\nsource_agent: \"grok\"\nproject_key: \"p-b9bfabf62fd0\"\nworkspace_id: \"w1\"\npane_id: \"w1:p1\"\ntags: [\"auto-capture\",\"grok\",\"status:idle\"]\nlinks: []\nredactions: 0\ncreated_at: \"2026-10-24T14:39:05.470Z\"\nupdated_at: \"2026-10-24T14:39:05.470Z\"\n---\n\nCaptured via agent read from cwd C:\\Herdr-dev\\integration\\runtime\\sessions\\realgrok-20261024-223836-82db81\\tmp\\throwaway-repo.\n\n### Recent output (last 5 lines)\n```text\n  ≡ master C:\\H\\i\\r\\s\\r\\tmp\\throwaway-repo   ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────╮   │                                                                                                               │   │  Grok Build  1.0.67                                                                                           │   │                                                                                                               │   │  Tool Call Density (v1.0.52)                                                                                  │\n   │  Choose how much of each tool call you see with /density. Don't see it? Run grok update!                      │\n   │                                                                                                               │   │  New worktree                              ",
+  "memory_doc_chars": 1923,
+  "plugin_log": "{\"id\": \"cli:plugin\", \"result\": {\"logs\": [{\"command\": [\"node\", \"src/on-agent-status.js\"], \"event\": \"pane.agent_status_changed\", \"exit_code\": 0, \"finished_unix_ms\": 1792852742313, \"log_id\": \"plugin-log-1\", \"plugin_id\": \"research.agent-memory\", \"started_unix_ms\": 1792852739346, \"status\": \"succeeded\", \"stderr\": \"\", \"stdout\": \"{\\\"plugin\\\":\\\"research.agent-memory\\\",\\\"skipped\\\":true,\\\"reason\\\":\\\"Herdr reports no completed work for this idle transition\\\",\\\"code\\\":\\\"herdr-no-completed-work\\\",\\\"via\\\":\\\"completion_seq\\\",\\\"retried\\\":false,\\\"herdr\\\":{\\\"present\\\":true,\\\"completionSeq\\\":null,\\\"stateChangeSeq\\\":2,\\\"terminalId\\\":\\\"term_65e970e08e5151\\\",\\\"status\\\":\\\"blocked\\\",\\\"agent\\\":\\\"grok\\\",\\\"rechecked\\\":true},\\\"pane_id\\\":\\\"w1:p1\\\",\\\"status\\\":\\\"idle\\\"}\\n\"}, {\"command\": [\"node\", \"src/on-agent-status.js\"], \"event\": \"pane.agent_status_changed\", \"exit_code\": 0, \"finished_unix_ms\": 1792852741798, \"log_id\": \"plugin-log-2\", \"plugin_id\": \"research.agent-memory\", \"started_unix_ms\": 1792852741064, \"status\": \"succeeded\", \"stderr\": \"\", \"stdout\": \"{\\\"plugin\\\":\\\"research.agent-memory\\\",\\\"skipped\\\":true,\\\"reason\\\":\\\"not-a-capture-state\\\",\\\"code\\\":\\\"not-a-capture-state\\\",\\\"via\\\":null,\\\"retried\\\":false,\\\"herdr\\\":null,\\\"pane_id\\\":\\\"w1:p1\\\",\\\"status\\\":\\\"blocked\\\"}\\n\"}, {\"command\": [\"node\", \"src/on-agent-status.js\"], \"event\": \"pane.agent_status_changed\", \"exit_code\": 0, \"finished_unix_ms\": 1792852745579, \"log_id\": \"plugin-log-3\", \"plugin_id\": \"research.agent-memory\", \"started_unix_ms\": 1792852743019, \"status\": \"succeeded\", \"stderr\": \"\", \"stdout\": \"{\\\"plugin\\\":\\\"research.agent-memory\\\",\\\"captured\\\":true,\\\"file\\\":\\\"C:\\\\\\\\Herdr-dev\\\\\\\\integration\\\\\\\\runtime\\\\\\\\sessions\\\\\\\\realgrok-20261024-223836-82db81\\\\\\\\xdg-state\\\\\\\\herdr\\\\\\\\plugins\\\\\\\\research.agent-memory\\\\\\\\vault\\\\\\\\p-b9bfabf62fd0\\\\\\\\mem_mvmi8g00-e4673e71.md\\\",\\\"id\\\":\\\"mem_mvmi8g00-e4673e71\\\",\\\"paneId\\\":\\\"w1:p1\\\",\\\"agent\\\":\\\"grok\\\",\\\"status\\\":\\\"idle\\\",\\\"projectKey\\\":\\\"p-b9bfabf62fd0\\\",\\\"projectRoot\\\":\\\"C:\\\\\\\\Herdr-dev\\\\\\\\integration\\\\\\\\runtime\\\\\\\\sessions\\\\\\\\realgrok-20261024-223836-82db81\\\\\\\\tmp\\\\\\\\throwaway-repo\\\",\\\"redactions\\\":0,\\\"files\\\":[],\\\"bodyChars\\\":1495,\\\"count\\\":1,\\\"decision\\\":{\\\"code\\\":\\\"herdr-completion\\\",\\\"reason\\\":\\\"completion_seq 3\\\",\\\"via\\\":\\\"completion_seq\\\",\\\"retried\\\":false},\\\"metadata_token\\\":\\\"reported\\\",\\\"elapsed_ms\\\":1375}\\n\"}], \"type\": \"plugin_log_list\"}}",
+  "recall": {
+    "included": 0,
+    "chars": 305,
+    "raw_read_chars": 2223
+  },
+  "pane_tokens": {
+    "memory": "1 notes"
+  },
+  "failed_checks": [
+    "agent_answer_has_bullets",
+    "recall_includes_capture_or_handoff"
+  ],
+  "aborted_reason": null,
+  "server_exit": 0,
+  "agent_home_changes": {
+    "added_count": 9,
+    "modified_count": 18,
+    "removed_count": 0,
+    "note": "file names omitted for publication; classes are described in research/14 and research/15",
+    "by_top_level_counts": {
+      "CHANGELOG.json": 1,
+      "CHANGELOG.md": 1,
+      "active_sessions.json": 1,
+      "logs": 1,
+      "marketplace-cache": 9,
+      "models_cache.json": 1,
+      "sessions": 10,
+      "settings_cache.json": 1,
+      "tip_cursor.json": 1,
+      "trusted_folders.toml": 1
+    }
+  },
+  "timeline": [
+    {
+      "t_ms": 12906.8,
+      "kind": "step",
+      "step": "2-agent-start"
+    },
+    {
+      "t_ms": 19906.1,
+      "kind": "herdr-event",
+      "event": "pane_agent_detected",
+      "agent": "grok",
+      "status": null
+    },
+    {
+      "t_ms": 23343.6,
+      "kind": "herdr-event",
+      "event": "pane.agent_status_changed",
+      "agent": "grok",
+      "status": "idle"
+    },
+    {
+      "t_ms": 24707.6,
+      "kind": "step",
+      "step": "3-agent-prompt"
+    },
+    {
+      "t_ms": 25056.5,
+      "kind": "herdr-event",
+      "event": "pane.agent_status_changed",
+      "agent": "grok",
+      "status": "blocked"
+    },
+    {
+      "t_ms": 26441.1,
+      "kind": "policy",
+      "phase": "turn",
+      "intervention": 1
+    },
+    {
+      "t_ms": 27005.2,
+      "kind": "herdr-event",
+      "event": "pane.agent_status_changed",
+      "agent": "grok",
+      "status": "idle"
+    },
+    {
+      "t_ms": 28773.6,
+      "kind": "step",
+      "step": "4-5-read-and-handoff"
+    }
+  ]
+}
