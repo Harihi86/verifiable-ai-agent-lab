@@ -2,7 +2,7 @@
 
 Every row names the claim, the artifact that supports it in this track, the command that produced it (as run in the
 research workspace on 2026-10-24), the observed result, and the verification class from [`../README.md`](../README.md).
-Full command transcripts with exit codes are in [`reports/07-test-runs.md`](reports/07-test-runs.md) (R1–R14).
+Full command transcripts with exit codes are in [`reports/07-test-runs.md`](reports/07-test-runs.md) (R1–R17).
 
 ## Baselines and provenance
 
@@ -50,6 +50,18 @@ Full command transcripts with exit codes are in [`reports/07-test-runs.md`](repo
 | Patched manifest passes Herdr's own validator | `reports/14 §3`, `reports/07 R13` | `python scripts/agent_detection_manifest_check.py` (bundled + published copies) | "agent detection manifests ok"; 13/13 checker unit tests | offline verification |
 | With the patch, `agent start` reports the trust prompt, the approval policy answers it explicitly, the prompt arrives intact, memory capture and handoff follow | `evidence/real-agent/realgrok-20261024-172705-b30c8d.json`, `reports/14 §4` | `… --manifest-override <patched grok.toml>` | 13/13; `agent_not_ready` → `blocked` → key `y` → `idle` 0.2 s later; turn 8.9 s | real-agent verification |
 | Memory plugin captures a real agent's settle | both JSON files (`memory_doc_head`), `reports/14` | event hook | 2,343 / 1,661-char documents with `source_agent: "grok"` | real-agent verification |
+
+## Real-agent verification (Codex CLI 0.163.0-alpha.11.2, one configuration)
+
+| Claim | Artifact | Command | Observed | Class |
+|---|---|---|---|---|
+| No standalone Codex CLI is installed; the desktop app ships two CLI builds; the 0.159 alpha exits without `--no-daemon` and cannot read files with it | `reports/15 §1`, `evidence/real-agent/realcodex-20261024-174232-616d36.json`, `…-174616-9494c9.json` | `python integration/validate_real_grok.py --kind codex --pane-path-prepend <app bin dir>` | run 1 aborted (process exited, `unknown`); run 2 13/13 script checks but the agent reported its tool host unavailable | real-agent verification (negative result) |
+| Herdr's bundled Codex manifest reports the folder-trust prompt as `blocked`; `agent start` returns `agent_not_ready`; the policy answers `1` "Trust and continue" then `enter` | `evidence/real-agent/realcodex-20261024-174838-7413cb.json`, fixture `evidence/real-agent/fixtures/codex-0.163-trust-dialog-screen.txt`, `reports/07 R17` | same script, complete package dir, flags `--sandbox read-only --no-daemon` | blocked 3.5 s after start; idle 2.9 s after approval; no manifest change needed | real-agent verification |
+| The complete package completes the task through Herdr; memory captured; handoff recorded | same JSON, `reports/15 §2,5` | same | 13/13; `Called Read README.md`, three correct bullets, no files changed; capture 2,105 chars `source_agent: "codex"`; recall 1 memory / 1,653 chars vs raw 1,590 | real-agent verification |
+| Executor timeout race and preflight PATH resolution fixed during the runs | `prototypes/herdr-dispatch/herdr_dispatch/executor.py`, `validate_real_grok.py`, `reports/07 R15` | `python -m unittest tests.test_dispatch` | 8/8 | tested prototype |
+| Summarizer filters Codex footer chrome | `prototypes/herdr-agent-memory/tests/summarize.test.js` | `node --test "tests/**/*.test.js"` | 23/23 | tested prototype |
+
+Not verified for Codex: default daemon mode (the app's shared app-server), npm/standalone-installer distributions.
 
 ## Isolation
 

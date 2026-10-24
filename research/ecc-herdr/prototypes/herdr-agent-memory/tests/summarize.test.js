@@ -62,3 +62,23 @@ test('terminal chrome (footer hints, borders, telemetry banner) is dropped and n
   assert.doesNotMatch(summary.body, /Ctrl\+x:shortcuts|Grok 4\.7 \(high\)/);
   assert.match(summary.body, /Nothing was changed/);
 });
+
+test('Codex footer chrome is dropped and the headline is the last content line', () => {
+  // Shape of a real Codex CLI 0.163 screen captured through `herdr agent read` (research/07 R17).
+  const codexScreen = [
+    '\u2022 Called Read README.md',
+    '  \u2514 - It contains one Python module, `src/hello.py`, that prints a greeting.',
+    '\u2022 \u2022 Validates Herdr-native agent dispatch.',
+    '  \u2022 Will be deleted after validation. No files changed; nothing remains to do.',
+    '  Worked for 25s \u2022 17:49',
+    '',
+    '\u203a Ask Codex to do anything',
+    '',
+    '  GPT-6.1-Sol xhigh \u00b7 C:/tmp/throwaway-repo \u00b7 Validate Her\u2026',
+    '  ? for shortcuts',
+  ].join('\n');
+  const summary = summarizeTranscript(codexScreen);
+  assert.doesNotMatch(summary.headline, /shortcuts|Ask Codex/);
+  assert.doesNotMatch(summary.body, /\? for shortcuts|Ask Codex to do anything/);
+  assert.match(summary.body, /No files changed/);
+});

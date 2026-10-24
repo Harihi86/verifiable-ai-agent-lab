@@ -43,7 +43,14 @@ ADAPTERS: dict[str, KindAdapter] = {
     "codex": KindAdapter(
         kind="codex", executable="codex", herdr_resume_argv=["codex", "resume", "<session-id>"],
         native_flags={"model": (["-m", "{model}"], "appears in Herdr docs example `-- -m gpt-5.4` (agent-automation.mdx); value semantics unverified")},
-        notes=["No system-prompt flag known; instructions are delivered as the first prompt.", "On Windows Herdr sends a paste boundary before Enter for Codex prompts (docs)."],
+        notes=[
+            "No system-prompt flag known; instructions are delivered as the first prompt.",
+            "On Windows Herdr sends a paste boundary before Enter for Codex prompts (docs).",
+            "Live-validated 2026-10-24 (research/07 R15-R17, research/15): Herdr 0.9.5 bundled codex.toml reports Codex's folder-trust prompt as blocked; "
+            "with the desktop app's complete package (codex-cli 0.163.0-alpha.11.2) and `--sandbox read-only --no-daemon` the whole plan completed. "
+            "The app's ~/.codex/.sandbox-bin build (0.159 alpha) cannot do real work from a pane. No standalone CLI was installed on that machine.",
+            "Verified in `codex --help` 0.159/0.163: -s/--sandbox <MODE>, -a/--ask-for-approval <POLICY>, -m/--model, -C/--cd, --no-daemon, --no-alt-screen, exec, resume.",
+        ],
     ),
     "cursor": KindAdapter(
         kind="cursor", executable="cursor-agent", herdr_resume_argv=["cursor-agent", "<resume-args>"],

@@ -88,7 +88,8 @@ emits only Herdr CLI steps; Prototype B runs before anything is installed and ne
 | Mocked contract tests | A's fake-Herdr CLI tests; B's synthetic fixtures; C's dry-run against the real binary's argv contract |
 | Disposable local Herdr backend | smoke, probe, baseline, A 18/18, C 9/9 — all with per-run resolution records |
 | Native agent: **Grok Build 1.0.67** (owner-authorized, 2026-10-24) | two supervised runs in isolated sessions with throwaway repositories: run 1 (bundled manifests) 12/12 checks but exposed a detection gap; run 2 (patched manifest as local override) **13/13** — `agent start --kind grok` → trust prompt reported `blocked` → policy-approved → prompt → correct answer → memory capture → handoff. `research/14-real-grok-validation.md`, `research/07 R12–R13` |
-| Native agents claude/codex/cursor/gemini | **not exercised** (not authorized) |
+| Native agent: **Codex CLI 0.163.0-alpha.11.2** (owner-authorized, 2026-10-24) | three supervised runs: the app-bundled 0.159 alpha binary cannot work interactively (no complete package; with `--no-daemon` its tool host is unavailable); the app's complete package with `--sandbox read-only --no-daemon` **13/13 and task completed** — bundled Codex manifest reported the trust prompt as `blocked` (no manifest change needed), policy-approved, prompt, correct answer, capture, handoff. `research/15-real-codex-validation.md`, `research/07 R15–R17` |
+| Native agents claude/cursor/gemini; Codex daemon mode or npm/installer distributions | **not exercised** |
 | Cross-machine / SSH / <remote-machine> | **not exercised** (not authorized; link intentionally paused) |
 
 Simulated agents proved Herdr's event, state and plugin machinery; the Grok runs proved the real path for one kind and
@@ -123,6 +124,8 @@ changed). Other kinds remain to be validated under authorization.
 | Real Grok Build 1.0.67: `agent start` → detected / ready | detected ≈1.1 s after start; ready 4.6 s (run 1), 7.1 s incl. trust prompt + approval (run 2) |
 | Real Grok Build: prompt → settled (one read-only turn) | 7.5 s / 8.9 s; agent context shown ≈15K tokens of 256K |
 | Real Grok Build: settle → memory document on disk | within the plugin's 30 s poll (captured on the first `working→idle`) |
+| Real Codex 0.163 (`--no-daemon`, read-only sandbox): `agent start` → ready incl. trust approval | 9.2 s |
+| Real Codex 0.163: prompt → settled (one read-only turn, `Read README.md`) | 26.3 s (the 0.159 alpha took 51 s and failed to read) |
 | Gate scan of all ECC skills (599 files, 4.8 MB) | 4.6 s |
 | Token usage | **not measured** (no tokenizer; recall is bounded by characters: 8000 per digest) |
 
@@ -141,7 +144,12 @@ as role packets (usable via C once reviewed), a Herdr-side MCP façade.
    staged on the research branch (bundled + published copies) and proven live in run 2; until upstream ships it, use the
    local override `prototypes/herdr-dispatch/manifests/grok.toml` and treat any new working directory as needing a
    supervised trust approval.
-1. Real-agent behaviour of A and C is verified for Grok Build only; claude/codex/cursor/gemini remain unverified (see §5).
+1. Real-agent behaviour of A and C is verified for Grok Build 1.0.67 and Codex CLI 0.163 (`--no-daemon`, read-only
+   sandbox) only; Claude Code, Cursor and Gemini remain unverified (see §5).
+1a. **Codex packaging on this machine:** no standalone CLI is installed; the desktop app's two bundled builds behave
+   differently (the 0.159 alpha cannot read files outside the app's daemon). Dispatching Codex from Herdr here requires
+   pointing the pane at the app's complete package directory and passing `--no-daemon`; Herdr's standalone-binary probe
+   (`~/.codex/packages/standalone/releases`) does not see either build.
 2. `agent wait <name>` returned `agent_not_found` for a custom-source agent while `agent read` by name worked — needs
    confirmation in Herdr source before relying on waits for custom agents.
 3. Lifecycle event names differ in form (`workspace_created` vs `pane.agent_status_changed`); subscribers must handle both.
@@ -224,9 +232,9 @@ created during the authorized runs.
 |---|---|
 | Independent clone, pinned ECC, provenance | implemented, verified |
 | Isolation harness + audit | implemented, tested |
-| Prototype A (memory plugin) | implemented, unit + backend tested, **validated with real Grok Build** (claude/codex/cursor unverified) |
+| Prototype A (memory plugin) | implemented, unit + backend tested, **validated with real Grok Build and real Codex** (claude/cursor/gemini unverified) |
 | Prototype B (asset gate) | implemented, unit tested, corpus-run |
-| Prototype C (dispatch) | implemented, unit + simulated backend tested, **real `agent start --kind grok` validated twice** (other kinds unverified) |
+| Prototype C (dispatch) | implemented, unit + simulated backend tested, **real `agent start --kind grok` validated twice and `--kind codex` once (0.163, `--no-daemon`)** (claude/cursor/gemini unverified) |
 | Grok manifest fix (trust dialog + footer) | **proposed upstream change, validator-clean, live-proven** (not compiled into a binary here; data-only) |
 | Herdr core fix for hook drift (G3) | proposed |
 | Role-packet library, memory curation actions, evaluation log | proposed (roadmap) |

@@ -37,9 +37,9 @@ dispatch competes with Herdr; anything that is a *format* or a *pattern* can be 
 
 | Prototype | Herdr interface used | Ownership kept by Herdr | Status |
 |---|---|---|---|
-| A `research.agent-memory` | plugin manifest `[[events]] on = "pane.agent_status_changed"`, `HERDR_BIN_PATH` callbacks (`pane get`, `agent read`), raw `pane.report_metadata`, actions `recall`/`list`/`handoff`; state under `HERDR_PLUGIN_STATE_DIR` | Herdr decides when an agent settled; the plugin reads what Herdr exposes; nothing is injected into any agent; recall is text with a non-instruction guard | tested; real-agent verified (Grok) |
+| A `research.agent-memory` | plugin manifest `[[events]] on = "pane.agent_status_changed"`, `HERDR_BIN_PATH` callbacks (`pane get`, `agent read`), raw `pane.report_metadata`, actions `recall`/`list`/`handoff`; state under `HERDR_PLUGIN_STATE_DIR` | Herdr decides when an agent settled; the plugin reads what Herdr exposes; nothing is injected into any agent; recall is text with a non-instruction guard | tested; real-agent verified (Grok, Codex 0.163 `--no-daemon`) |
 | B `agent-asset-gate` | none at scan time (pure Python); `coexist` reads a Claude `settings.json` to check Herdr's canonical hook entry | a human runs it before `herdr plugin install` / `integration install`; "deny" blocks only that human step | tested; corpus-run |
-| C `herdr-dispatch` | only Herdr CLI steps: `workspace`/`worktree create`, `agent start --kind K --pane`, `agent prompt --wait`, `agent read`; optional handoff into A | every step `authority: herdr`; no agent drives another; native agent flags are opt-in and annotated with verification status | tested; real-agent verified (Grok) |
+| C `herdr-dispatch` | only Herdr CLI steps: `workspace`/`worktree create`, `agent start --kind K --pane`, `agent prompt --wait`, `agent read`; optional handoff into A | every step `authority: herdr`; no agent drives another; native agent flags are opt-in and annotated with verification status | tested; real-agent verified (Grok twice, Codex 0.163 `--no-daemon` once) |
 
 Herdr core changes proposed (not implemented here): make `integration status claude|codex|cursor` re-validate the
 settings entry (drift gap); ship the Grok manifest fix (commit `5302348e` on the source branch).
@@ -53,8 +53,8 @@ settings entry (drift gap); ship the Grok manifest fix (commit `5302348e` on the
 3. Before trusting dispatch into untrusted directories, close the detection-drift gap for each agent build in use
    (manifest regression fixtures per version).
 4. What production would additionally require: a Rust toolchain build of Herdr with the manifest change, maintainer
-   review, real-agent validation of Codex, Claude Code, Cursor and Gemini under the same supervised protocol, and an
-   operator review loop for memories (reject/supersede).
+   review, real-agent validation of Codex in its default daemon mode and of Claude Code, Cursor and Gemini under the
+   same supervised protocol, and an operator review loop for memories (reject/supersede).
 
 ## Measurements (research machine, release binary, headless)
 
@@ -66,5 +66,6 @@ settings entry (drift gap); ship the Grok manifest fix (commit `5302348e` on the
 | Simulated settle → memory document on disk | 652 ms |
 | Real Grok: detected after start / ready (run 1, run 2 incl. trust approval) | ≈1.1 s / 4.6 s, 7.1 s |
 | Real Grok: one read-only turn | 7.5 s, 8.9 s (agent UI showed ≈15K of 256K context) |
+| Real Codex 0.163 (`--no-daemon`, read-only sandbox): start → ready incl. trust approval / one read-only turn | 9.2 s / 26.3 s (the 0.159 alpha took 51 s and could not read files) |
 | Gate scan of all ECC skills (599 files, 4.8 MB) | 4.6 s |
 | Token usage | not measured (no tokenizer); recall bounded to 8,000 characters |

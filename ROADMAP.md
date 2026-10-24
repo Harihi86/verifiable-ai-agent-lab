@@ -11,7 +11,7 @@
 | P2 / Planned | Cost per verified task and recovery metrics | Real provider traces and declared accounting | Recompute reported costs, success fractions and uncertainty from raw traces |
 | P3 / Research | Contamination-controlled repository, terminal and computer-use evaluations | Dataset rights and isolated runners | Public task provenance, held-out split and documented benchmark protocol; never claim official results from internal tasks |
 | P3 / Research | LLM judges, synthetic task generation and selective formal methods | Calibrated rubrics and task semantics | Judge agreement checked against human/reference outcomes; generated tasks validated independently |
-| P3 / Research track | ECC × Herdr integration study: agent-asset static review, screen-fixture graders, real-agent run records and isolation audits as candidate lab techniques | None; the lab stays independent of Herdr | See [research/ecc-herdr/ROADMAP.md](research/ecc-herdr/ROADMAP.md); only Grok Build has real-agent verification, nothing is production-ready |
+| P3 / Research track | ECC × Herdr integration study: agent-asset static review, screen-fixture graders, real-agent run records and isolation audits as candidate lab techniques | None; the lab stays independent of Herdr | See [research/ecc-herdr/ROADMAP.md](research/ecc-herdr/ROADMAP.md); real-agent verification exists only for Grok Build and for Codex in one configuration, nothing is production-ready |
 
 Next milestone: isolate execution and owner acceptance artifacts before accepting
 untrusted submissions. Multi-host orchestration is deferred until this boundary

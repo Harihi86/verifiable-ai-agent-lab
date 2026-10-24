@@ -14,7 +14,7 @@ function stripAnsi(text) {
 }
 
 // Terminal UI chrome that carries no task content: box borders, footer key hints, telemetry banners.
-const CHROME_KEYWORDS = /(?:^|\s)(?:ctrl\+[a-z.]+|shift\+tab|esc):\S|\[(?:dashboard|opt out|opt in|stop)\]|help improve|terms and privacy|opt-in to allow|retain coding data|training and debugging|change anytime via settings|\b\d+k \/ \d+k\b/i;
+const CHROME_KEYWORDS = /(?:^|\s)(?:ctrl\+[a-z.]+|shift\+tab|esc):\S|\[(?:dashboard|opt out|opt in|stop)\]|help improve|terms and privacy|opt-in to allow|retain coding data|training and debugging|change anytime via settings|\b\d+k \/ \d+k\b|\? for shortcuts|ask codex to do anything|f2 to view|enter continue · esc quit/i;
 const BOX_CHARS = /[─-╿▀-▟]/g;
 
 function isChrome(line) {

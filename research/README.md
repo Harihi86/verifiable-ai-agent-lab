@@ -7,7 +7,7 @@ the lab has no dependency on any orchestration system studied in a track.
 
 | Track | Subject | Status |
 |---|---|---|
-| [`ecc-herdr/`](ecc-herdr/README.md) | Evaluation of the ECC agent-harness project against the Herdr terminal agent runtime: component comparison, three tested prototypes, one real-agent validation (Grok Build 1.0.67), a detection vulnerability and its validated fix | research track, 2026-10-24; proposals only, nothing production-ready |
+| [`ecc-herdr/`](ecc-herdr/README.md) | Evaluation of the ECC agent-harness project against the Herdr terminal agent runtime: component comparison, three tested prototypes, real-agent validations (Grok Build 1.0.67; Codex CLI 0.163 in one configuration), a detection vulnerability and its validated fix | research track, 2026-10-24; proposals only, nothing production-ready |
 
 Verification classes used by every track (a document or artifact says which one applies):
 

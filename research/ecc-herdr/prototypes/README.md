@@ -62,7 +62,14 @@ Real-agent validation (spends the owner's Grok tokens; run only with authorizati
 cd C:\Herdr-dev\prototypes\herdr-dispatch && python -X utf8 integration/validate_real_grok.py --max-turns 3 --manifest-override C:/Herdr-dev/prototypes/herdr-dispatch/manifests/grok.toml
 ```
 Without `--manifest-override`, Herdr 0.9.5's bundled Grok rules misread the 1.0.67 trust dialog as idle (see
-`research/14-real-grok-validation.md`). Offline classification of a captured screen needs no agent at all:
+`research/14-real-grok-validation.md`).
+
+Codex (the desktop app's complete package, exposed to the research pane only; `--no-daemon` keeps the app's shared daemon out of the run):
+
+```bash
+cd C:\Herdr-dev\prototypes\herdr-dispatch && python -X utf8 integration/validate_real_grok.py --kind codex --max-turns 3 --pane-path-prepend "C:/Users/<user>/AppData/Local/OpenAI/Codex/bin/<hash>" --extra-arg=--sandbox --extra-arg=read-only --extra-arg=--no-daemon
+```
+See `research/15-real-codex-validation.md` for why the `~/.codex/.sandbox-bin` build is not usable for real work. Offline classification of a captured screen needs no agent at all:
 `herdr.exe --session <research> agent explain --file <screen.txt> --agent grok --json` with the patched manifest copied to
 `<XDG_CONFIG_HOME>\herdr\agent-detection\grok.toml` of that research session.
 

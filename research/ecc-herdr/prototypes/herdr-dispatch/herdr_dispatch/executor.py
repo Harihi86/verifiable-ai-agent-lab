@@ -101,7 +101,14 @@ def execute_plan(plan: DispatchPlan, runner: HerdrRunner, *, simulate: bool = Fa
                                            input=result.stdout_tail or variables.get("last_read", ""))
                 result.argv.append(rendered[1:])
             else:
-                completed = runner.run(rendered)
+                # A Herdr command that carries its own --timeout (ms) may legitimately run that long; give it a margin.
+                cli_timeout = 120.0
+                if "--timeout" in rendered:
+                    try:
+                        cli_timeout = int(rendered[rendered.index("--timeout") + 1]) / 1000.0 + 30.0
+                    except (ValueError, IndexError):
+                        pass
+                completed = runner.run(rendered, timeout=cli_timeout)
                 result.argv.append(runner.argv(rendered))
             result.exit_codes.append(completed.returncode)
             result.stdout_tail = completed.stdout[-4000:]

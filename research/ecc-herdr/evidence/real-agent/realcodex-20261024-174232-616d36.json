@@ -1,0 +1,96 @@
+{
+  "session": "realcodex-20261024-174232-616d36",
+  "root": "C:\\Herdr-dev\\runtime\\sessions\\realcodex-20261024-174232-616d36",
+  "kind": "codex",
+  "checks": {
+    "agent_resolves_outside_production_dirs": true,
+    "server_ready": true,
+    "plugin_link_exit": 0,
+    "workspace_created": true
+  },
+  "policy_actions": [],
+  "screens": {
+    "99-final": "PS C:\\Herdr-dev\\runtime\\sessions\\realcodex-20261024-174232-616d36\\tmp\\throwaway-repo> if((Get-Command codex -ErrorActio\nn SilentlyContinue).CommandType -eq 'ExternalScript'){& codex '--sandbox' read-only}else{Start-Process -FilePath codex\n-ArgumentList '--sandbox read-only' -NoNewWindow -Wait}\nError: this CLI has no complete local package; install a packaged Codex CLI or use the standalone installer\nTo work without the background server, rerun the same command with --no-daemon (including resume or fork and its argume\nnts).\nPS C:\\Herdr-dev\\runtime\\sessions\\realcodex-20261024-174232-616d36\\tmp\\throwaway-repo>\n"
+  },
+  "manifest_override": null,
+  "pane_path_prepend": "<USERPROFILE>\\.codex\\.sandbox-bin",
+  "agent": {
+    "executable": "codex",
+    "resolved": "<USERPROFILE>\\.codex\\.sandbox-bin\\codex.EXE",
+    "where": [
+      "<USERPROFILE>\\.codex\\.sandbox-bin\\codex.exe"
+    ],
+    "version": "codex-cli 0.159.0-alpha.12.1"
+  },
+  "agent_home": "<USERPROFILE>\\.codex",
+  "plan_agent_start_argv": [
+    "agent",
+    "start",
+    "codex-probe",
+    "--kind",
+    "codex",
+    "--pane",
+    "{pane_id}",
+    "--timeout",
+    "120000",
+    "--",
+    "--sandbox",
+    "read-only"
+  ],
+  "pane_id": "w1:p1",
+  "aborted_reason": null,
+  "server_exit": 0,
+  "agent_home_changes": {
+    "added_count": 2,
+    "modified_count": 9,
+    "removed_count": 3,
+    "note": "file names omitted for publication; classes are described in research/14 and research/15",
+    "by_top_level_counts": {
+      ".codex-global-state.json": 1,
+      ".codex-global-state.json.bak": 1,
+      "app-server-daemon": 2,
+      "goals_1.sqlite-wal": 1,
+      "logs_2.sqlite": 1,
+      "logs_2.sqlite-wal": 1,
+      "models_cache.json": 1,
+      "sessions": 1,
+      "state_5.sqlite-wal": 1,
+      "thread_history_1.sqlite-wal": 1
+    }
+  },
+  "timeline": [
+    {
+      "t_ms": 7785.0,
+      "kind": "step",
+      "step": "2-agent-start"
+    },
+    {
+      "t_ms": 8909.8,
+      "kind": "herdr-event",
+      "event": "pane_agent_detected",
+      "agent": "codex",
+      "status": null
+    },
+    {
+      "t_ms": 9914.4,
+      "kind": "herdr-event",
+      "event": "pane.agent_status_changed",
+      "agent": "codex",
+      "status": "idle"
+    },
+    {
+      "t_ms": 9914.4,
+      "kind": "herdr-event",
+      "event": "pane_agent_detected",
+      "agent": "codex",
+      "status": null
+    },
+    {
+      "t_ms": 10218.0,
+      "kind": "herdr-event",
+      "event": "pane.agent_status_changed",
+      "agent": null,
+      "status": "unknown"
+    }
+  ]
+}

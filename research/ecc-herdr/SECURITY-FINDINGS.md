@@ -37,6 +37,18 @@ any binary.
 3. Version-drift alarm: when the detected agent version is newer than the manifest's evidence header (here 1.0.34 vs
    1.0.67), surface a warning in `agent start` output.
 
+**Contrast with Codex (verified later the same day).** Herdr's bundled `codex.toml` already carries a `trust_directory`
+blocker rule, and in the Codex runs it matched the "Folder access / Trust this folder? … 1. Trust and continue /
+2. Quit" screen: `agent start` returned `agent_not_ready`, the prompt was never typed into the dialog, and the approval
+was an explicit, logged policy action (`reports/15`, fixture `evidence/real-agent/fixtures/codex-0.163-trust-dialog-screen.txt`).
+The failure class is therefore per-manifest drift, not a design flaw of the blocked-state mechanism; the recommended
+regression tests below apply to every kind.
+
+**Packaging observation (Codex).** On the research machine no standalone Codex CLI existed; the desktop app bundles two
+builds, and only the complete package with `--no-daemon` could do real work from a pane. Herdr's standalone-binary probe
+does not see either build. An orchestrator should record the exact executable and version it dispatched (the run records
+here do) rather than assume "codex" means one thing.
+
 ## 2. Risks found in the evaluated third-party project (ECC) that drove rejections
 
 From [`reports/11 §4`](reports/11-phase2-ecc-assessment.md) and [`reports/04 §8`](reports/04-ecc-hooks-learning-memory.md):
@@ -62,6 +74,8 @@ Lesson applied in the prototypes: recalled memory is wrapped as "HISTORICAL REFE
 | A synchronous pipe read blocked `close()` on Windows, leaving a research server running after a script finished | `prototypes/common/herdr_socket.py` | `CancelSynchronousIo` on the reader thread before closing | subsequent runs teardown cleanly (`reports/07 R13`) |
 | Memory capture titled a Grok session with a footer-hint line, then with a telemetry banner line | `summarize.js` | terminal-chrome filter (key hints, box borders, banner phrases) | `summarize.test.js` chrome test |
 | A gate scan of the prototypes was "deny" only because test fixtures contain fake tokens and a test bidi character | `asset_gate/rules.py` | findings under test/fixture paths capped at `low` unless `--strict` | `FixtureCapTests` |
+| The dispatch executor's fixed 120 s subprocess timeout raced Herdr's own 120 s `agent start` timeout (Codex run 1) | `herdr_dispatch/executor.py` | a step's CLI timeout is derived from its own `--timeout` plus a margin | `test_dispatch.py` 8/8 |
+| The real-agent preflight resolved a bare executable name against the parent PATH, not the child's | `validate_real_grok.py` | `shutil.which` against the research PATH | run records show the resolved path and version |
 
 ## 4. Static pre-install gate: what it catches and what it does not
 
