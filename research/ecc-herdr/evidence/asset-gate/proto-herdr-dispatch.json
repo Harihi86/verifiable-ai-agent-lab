@@ -1,0 +1,65 @@
+{
+  "root": "C:\\Herdr-dev\\prototypes\\herdr-dispatch",
+  "decision": "review",
+  "reason": "needs human review: AGENT-SPAWNx4",
+  "files_scanned": 8,
+  "files_skipped": 0,
+  "bytes_scanned": 35245,
+  "executable_files": 8,
+  "instruction_files": 0,
+  "elapsed_ms": 34.1,
+  "counts": {
+    "by_severity": {
+      "medium": 4
+    },
+    "by_rule": {
+      "AGENT-SPAWN": 4
+    }
+  },
+  "findings": [
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "herdr_dispatch/kinds.py",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 44,
+      "evidence": "codex\", exec",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "herdr_dispatch/kinds.py",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 49,
+      "evidence": "cursor-agent",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "herdr_dispatch/kinds.py",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 51,
+      "evidence": "cursor-agent",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "herdr_dispatch/kinds.py",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 54,
+      "evidence": "grok\", \"--resume",
+      "tags": [
+        "orchestration"
+      ]
+    }
+  ]
+}

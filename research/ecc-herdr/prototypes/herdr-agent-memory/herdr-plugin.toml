@@ -1,0 +1,30 @@
+id = "research.agent-memory"
+name = "Agent Memory (research prototype)"
+version = "0.1.0"
+min_herdr_version = "0.9.5"
+description = "Herdr-owned cross-agent session memory vault: event-driven capture, explicit non-executable recall"
+platforms = ["windows", "linux", "macos"]
+
+# Capture: Herdr tells us when any recognised agent (claude, codex, cursor, grok, custom...) settles.
+[[events]]
+on = "pane.agent_status_changed"
+command = ["node", "src/on-agent-status.js"]
+
+# Explicit recall for an orchestrator or a person. Output is a bounded Markdown digest in the plugin log.
+[[actions]]
+id = "recall"
+title = "Recall project memory"
+contexts = ["workspace"]
+command = ["node", "src/cli.js", "recall", "--from-context"]
+
+[[actions]]
+id = "list"
+title = "List project memories"
+contexts = ["workspace"]
+command = ["node", "src/cli.js", "list", "--from-context"]
+
+[[actions]]
+id = "handoff"
+title = "Write handoff note from pane"
+contexts = ["pane"]
+command = ["node", "src/cli.js", "handoff", "--from-context"]

@@ -1,0 +1,896 @@
+{
+  "root": "C:\\Herdr-dev\\ecc\\hooks",
+  "decision": "review",
+  "reason": "needs human review: EXEC-INLINEx32, GLOBAL-CONFIGx4, HOOK-INLINE-BLOBx28",
+  "files_scanned": 9,
+  "files_skipped": 0,
+  "bytes_scanned": 80958,
+  "executable_files": 2,
+  "instruction_files": 2,
+  "elapsed_ms": 81.6,
+  "counts": {
+    "by_severity": {
+      "medium": 64,
+      "info": 22,
+      "low": 6
+    },
+    "by_rule": {
+      "EXEC-INLINE": 32,
+      "GLOBAL-CONFIG": 4,
+      "HOOK-CAN-BLOCK": 19,
+      "HOOK-INLINE-BLOB": 28,
+      "HOOK-INVENTORY": 3,
+      "HOOK-TIMEOUT-MISMATCH": 6
+    }
+  },
+  "findings": [
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "README.md",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 263,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "README.md",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 276,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "README.md",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 289,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "README.md",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 302,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "codex-hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 10,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 9,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 18,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 28,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 37,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 46,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 57,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 67,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 77,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 86,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 96,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 107,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 119,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 130,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 139,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 150,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 160,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 173,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 182,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 193,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 203,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 212,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 222,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 231,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 242,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 253,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 264,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 277,
+      "evidence": "node -e",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "GLOBAL-CONFIG",
+      "severity": "medium",
+      "file": "README.md",
+      "message": "writes or targets user-global agent or system configuration",
+      "line": 29,
+      "evidence": "~/.claude/settings.json",
+      "tags": [
+        "global-config"
+      ]
+    },
+    {
+      "rule": "GLOBAL-CONFIG",
+      "severity": "medium",
+      "file": "README.md",
+      "message": "writes or targets user-global agent or system configuration",
+      "line": 42,
+      "evidence": "~/.claude/settings.json",
+      "tags": [
+        "global-config"
+      ]
+    },
+    {
+      "rule": "GLOBAL-CONFIG",
+      "severity": "medium",
+      "file": "README.md",
+      "message": "writes or targets user-global agent or system configuration",
+      "line": 92,
+      "evidence": "~/.claude/settings.json",
+      "tags": [
+        "global-config"
+      ]
+    },
+    {
+      "rule": "GLOBAL-CONFIG",
+      "severity": "medium",
+      "file": "README.md",
+      "message": "writes or targets user-global agent or system configuration",
+      "line": 150,
+      "evidence": "[Environment]::SetEnvironmentVariable",
+      "tags": [
+        "global-config"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "codex-hooks.json",
+      "message": "SessionStart hook command is 1512 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"if(!process.env.PLUGIN_ROOT)throw new Error('Missing Codex PLUGIN_ROOT');process.env.CLAUDE_PLUGIN_ROOT=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "PreToolUse hook command is 1380 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "PreToolUse hook command is 1465 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "PreToolUse hook command is 1452 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "PreToolUse hook command is 1455 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "PreToolUse hook command is 1435 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "PreToolUse hook command is 1450 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "PreToolUse hook command is 1448 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "PreToolUse hook command is 1446 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "PreToolUse hook command is 1465 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "PreToolUse hook command is 1452 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "UserPromptSubmit hook command is 1455 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "PreCompact hook command is 1432 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "SessionStart hook command is 1384 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "SessionStart hook command is 1464 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "PostToolUse hook command is 1350 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "PostToolUse hook command is 1351 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "PostToolUseFailure hook command is 1447 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "PostToolUseFailure hook command is 1443 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "Stop hook command is 1734 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "Stop hook command is 1742 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "Stop hook command is 1734 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "Stop hook command is 1730 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "Stop hook command is 1726 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "Stop hook command is 1736 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "Stop hook command is 1728 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "Stop hook command is 1724 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-INLINE-BLOB",
+      "severity": "medium",
+      "file": "hooks.json",
+      "message": "SessionEnd hook command is 1735 chars of inline code; review what it loads",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "HOOK-TIMEOUT-MISMATCH",
+      "severity": "low",
+      "file": "hooks.json",
+      "message": "async PreToolUse hook with timeout 10s may be killed before it finishes",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": []
+    },
+    {
+      "rule": "HOOK-TIMEOUT-MISMATCH",
+      "severity": "low",
+      "file": "hooks.json",
+      "message": "async Stop hook with timeout 10s may be killed before it finishes",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": []
+    },
+    {
+      "rule": "HOOK-TIMEOUT-MISMATCH",
+      "severity": "low",
+      "file": "hooks.json",
+      "message": "async Stop hook with timeout 10s may be killed before it finishes",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": []
+    },
+    {
+      "rule": "HOOK-TIMEOUT-MISMATCH",
+      "severity": "low",
+      "file": "hooks.json",
+      "message": "async Stop hook with timeout 10s may be killed before it finishes",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": []
+    },
+    {
+      "rule": "HOOK-TIMEOUT-MISMATCH",
+      "severity": "low",
+      "file": "hooks.json",
+      "message": "async Stop hook with timeout 10s may be killed before it finishes",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": []
+    },
+    {
+      "rule": "HOOK-TIMEOUT-MISMATCH",
+      "severity": "low",
+      "file": "hooks.json",
+      "message": "async SessionEnd hook with timeout 10s may be killed before it finishes",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": []
+    },
+    {
+      "rule": "HOOK-CAN-BLOCK",
+      "severity": "info",
+      "file": "hooks.json",
+      "message": "PreToolUse command hook can block or alter agent actions",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "authority"
+      ]
+    },
+    {
+      "rule": "HOOK-CAN-BLOCK",
+      "severity": "info",
+      "file": "hooks.json",
+      "message": "PreToolUse command hook can block or alter agent actions",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "authority"
+      ]
+    },
+    {
+      "rule": "HOOK-CAN-BLOCK",
+      "severity": "info",
+      "file": "hooks.json",
+      "message": "PreToolUse command hook can block or alter agent actions",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "authority"
+      ]
+    },
+    {
+      "rule": "HOOK-CAN-BLOCK",
+      "severity": "info",
+      "file": "hooks.json",
+      "message": "PreToolUse command hook can block or alter agent actions",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "authority"
+      ]
+    },
+    {
+      "rule": "HOOK-CAN-BLOCK",
+      "severity": "info",
+      "file": "hooks.json",
+      "message": "PreToolUse command hook can block or alter agent actions",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "authority"
+      ]
+    },
+    {
+      "rule": "HOOK-CAN-BLOCK",
+      "severity": "info",
+      "file": "hooks.json",
+      "message": "PreToolUse command hook can block or alter agent actions",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "authority"
+      ]
+    },
+    {
+      "rule": "HOOK-CAN-BLOCK",
+      "severity": "info",
+      "file": "hooks.json",
+      "message": "PreToolUse command hook can block or alter agent actions",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "authority"
+      ]
+    },
+    {
+      "rule": "HOOK-CAN-BLOCK",
+      "severity": "info",
+      "file": "hooks.json",
+      "message": "PreToolUse command hook can block or alter agent actions",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "authority"
+      ]
+    },
+    {
+      "rule": "HOOK-CAN-BLOCK",
+      "severity": "info",
+      "file": "hooks.json",
+      "message": "PreToolUse command hook can block or alter agent actions",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "authority"
+      ]
+    },
+    {
+      "rule": "HOOK-CAN-BLOCK",
+      "severity": "info",
+      "file": "hooks.json",
+      "message": "PreToolUse command hook can block or alter agent actions",
+      "line": null,
+      "evidence": "node -e \"const p=require('path');const r=(function(){var p=require('path'),f=require('fs'),o=require('os');var e=process",
+      "tags": [
+        "authority"
+      ]
+    }
+  ]
+}

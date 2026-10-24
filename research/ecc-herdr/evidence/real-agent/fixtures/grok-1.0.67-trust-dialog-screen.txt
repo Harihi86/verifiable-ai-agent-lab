@@ -1,0 +1,39 @@
+
+  ≡ master C:\H\r\s\r\tmp\throwaway-repo
+
+
+
+
+
+
+
+
+                                     Do you trust the contents of this directory?
+                   C:\Herdr-dev\runtime\sessions\realgrok-20261024-170910-8091d7\tmp\throwaway-repo
+
+                               Grok Build may run or modify contents in this directory,
+                                                posing security risks.
+
+                                             Yes, proceed                 y
+                                             No, quit                     n
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                   Grok Build  1.0.67

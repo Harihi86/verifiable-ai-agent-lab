@@ -1,0 +1,16 @@
+{
+  "root": "C:\\Herdr-dev\\prototypes\\common",
+  "decision": "allow",
+  "reason": "only informational or low findings",
+  "files_scanned": 7,
+  "files_skipped": 0,
+  "bytes_scanned": 37784,
+  "executable_files": 7,
+  "instruction_files": 0,
+  "elapsed_ms": 33.2,
+  "counts": {
+    "by_severity": {},
+    "by_rule": {}
+  },
+  "findings": []
+}
