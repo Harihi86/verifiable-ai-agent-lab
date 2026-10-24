@@ -1,0 +1,914 @@
+{
+  "root": "C:\\Herdr-dev\\ecc\\agents",
+  "decision": "review",
+  "reason": "needs human review: CRED-PATHx3, DESTRUCTIVEx4, EXEC-INLINEx10, PIPE-SHELLx1",
+  "files_scanned": 71,
+  "files_skipped": 0,
+  "bytes_scanned": 476384,
+  "executable_files": 0,
+  "instruction_files": 71,
+  "elapsed_ms": 460.9,
+  "counts": {
+    "by_severity": {
+      "info": 211,
+      "low": 74,
+      "medium": 11,
+      "high": 7
+    },
+    "by_rule": {
+      "ASSET-INVENTORY": 71,
+      "ASSET-MODEL-PIN": 71,
+      "ASSET-NO-PROVENANCE": 71,
+      "ASSET-TOOLS": 57,
+      "CRED-PATH": 3,
+      "DESTRUCTIVE": 4,
+      "EXEC-INLINE": 10,
+      "NET-FETCH": 3,
+      "NET-URL": 12,
+      "PIPE-SHELL": 1
+    }
+  },
+  "findings": [
+    {
+      "rule": "CRED-PATH",
+      "severity": "high",
+      "file": "flutter-reviewer.md",
+      "message": "references a credential or SSH/key store path",
+      "line": 208,
+      "evidence": "Keychain",
+      "tags": [
+        "credentials"
+      ]
+    },
+    {
+      "rule": "CRED-PATH",
+      "severity": "high",
+      "file": "swift-reviewer.md",
+      "message": "references a credential or SSH/key store path",
+      "line": 33,
+      "evidence": "Keychain",
+      "tags": [
+        "credentials"
+      ]
+    },
+    {
+      "rule": "CRED-PATH",
+      "severity": "high",
+      "file": "swift-reviewer.md",
+      "message": "references a credential or SSH/key store path",
+      "line": 34,
+      "evidence": "Keychain",
+      "tags": [
+        "credentials"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "build-error-resolver.md",
+      "message": "destructive or guard-bypassing command",
+      "line": 96,
+      "evidence": "rm -rf ",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "build-error-resolver.md",
+      "message": "destructive or guard-bypassing command",
+      "line": 99,
+      "evidence": "rm -rf ",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "java-build-resolver.md",
+      "message": "destructive or guard-bypassing command",
+      "line": 152,
+      "evidence": "rm -rf ",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "kotlin-build-resolver.md",
+      "message": "destructive or guard-bypassing command",
+      "line": 75,
+      "evidence": "rm -rf ",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "django-build-resolver.md",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 138,
+      "evidence": "python -c",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "django-build-resolver.md",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 151,
+      "evidence": "python -c",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "django-build-resolver.md",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 157,
+      "evidence": "python -c",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "django-build-resolver.md",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 190,
+      "evidence": "python -c",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "opensource-sanitizer.md",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 184,
+      "evidence": "bash -c",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "opensource-sanitizer.md",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 249,
+      "evidence": "bash -c",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "pytorch-build-resolver.md",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 35,
+      "evidence": "python -c",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "pytorch-build-resolver.md",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 36,
+      "evidence": "python -c",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "pytorch-build-resolver.md",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 39,
+      "evidence": "python -c",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "medium",
+      "file": "pytorch-build-resolver.md",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 85,
+      "evidence": "python -c",
+      "tags": [
+        "exec"
+      ]
+    },
+    {
+      "rule": "PIPE-SHELL",
+      "severity": "medium",
+      "file": "agent-evaluator.md",
+      "message": "remote content piped straight into a shell",
+      "line": 34,
+      "evidence": "curl \u2026 | sh",
+      "tags": [
+        "exec",
+        "network"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "a11y-architect.md",
+      "message": "'a11y-architect' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "agent-evaluator.md",
+      "message": "'agent-evaluator' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "architect.md",
+      "message": "'architect' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "bengali-reviewer.md",
+      "message": "'bengali-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "build-error-resolver.md",
+      "message": "'build-error-resolver' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "chief-of-staff.md",
+      "message": "'chief-of-staff' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "code-architect.md",
+      "message": "'code-architect' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "code-explorer.md",
+      "message": "'code-explorer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "code-reviewer.md",
+      "message": "'code-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "code-simplifier.md",
+      "message": "'code-simplifier' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "comment-analyzer.md",
+      "message": "'comment-analyzer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "commit-reviewer.md",
+      "message": "'commit-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "conversation-analyzer.md",
+      "message": "'conversation-analyzer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "cpp-build-resolver.md",
+      "message": "'cpp-build-resolver' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "cpp-reviewer.md",
+      "message": "'cpp-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "csharp-reviewer.md",
+      "message": "'csharp-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "dart-build-resolver.md",
+      "message": "'dart-build-resolver' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "database-reviewer.md",
+      "message": "'database-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "django-build-resolver.md",
+      "message": "'django-build-resolver' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "django-reviewer.md",
+      "message": "'django-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "doc-updater.md",
+      "message": "'doc-updater' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "docs-lookup.md",
+      "message": "'docs-lookup' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "e2e-runner.md",
+      "message": "'e2e-runner' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "fastapi-reviewer.md",
+      "message": "'fastapi-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "flutter-reviewer.md",
+      "message": "'flutter-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "fsharp-reviewer.md",
+      "message": "'fsharp-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "gan-evaluator.md",
+      "message": "'gan-evaluator' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "gan-generator.md",
+      "message": "'gan-generator' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "gan-planner.md",
+      "message": "'gan-planner' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "go-build-resolver.md",
+      "message": "'go-build-resolver' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "go-reviewer.md",
+      "message": "'go-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "harmonyos-app-resolver.md",
+      "message": "'harmonyos-app-resolver' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "harness-optimizer.md",
+      "message": "'harness-optimizer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "healthcare-reviewer.md",
+      "message": "'healthcare-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "homelab-architect.md",
+      "message": "'homelab-architect' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "java-build-resolver.md",
+      "message": "'java-build-resolver' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "java-reviewer.md",
+      "message": "'java-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "kotlin-build-resolver.md",
+      "message": "'kotlin-build-resolver' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "kotlin-reviewer.md",
+      "message": "'kotlin-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "loop-operator.md",
+      "message": "'loop-operator' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "marketing-agent.md",
+      "message": "'marketing-agent' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "mle-reviewer.md",
+      "message": "'mle-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "network-architect.md",
+      "message": "'network-architect' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "network-config-reviewer.md",
+      "message": "'network-config-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "network-troubleshooter.md",
+      "message": "'network-troubleshooter' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "opensource-forker.md",
+      "message": "'opensource-forker' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "opensource-packager.md",
+      "message": "'opensource-packager' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "opensource-sanitizer.md",
+      "message": "'opensource-sanitizer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "performance-optimizer.md",
+      "message": "'performance-optimizer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "php-reviewer.md",
+      "message": "'php-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "planner.md",
+      "message": "'planner' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "pr-test-analyzer.md",
+      "message": "'pr-test-analyzer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "python-reviewer.md",
+      "message": "'python-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "pytorch-build-resolver.md",
+      "message": "'pytorch-build-resolver' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "rag-pipeline-reviewer.md",
+      "message": "'rag-pipeline-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "react-build-resolver.md",
+      "message": "'react-build-resolver' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "react-reviewer.md",
+      "message": "'react-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "refactor-cleaner.md",
+      "message": "'refactor-cleaner' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "ruby-reviewer.md",
+      "message": "'ruby-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "rust-build-resolver.md",
+      "message": "'rust-build-resolver' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "rust-reviewer.md",
+      "message": "'rust-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "rule": "ASSET-NO-PROVENANCE",
+      "severity": "low",
+      "file": "security-reviewer.md",
+      "message": "'security-reviewer' has no license/origin metadata in frontmatter",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "attribution"
+      ]
+    }
+  ]
+}

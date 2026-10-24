@@ -1,0 +1,10 @@
+exe=C:\Herdr-dev\herdr\target\x86_64-pc-windows-gnu\debug\deps\herdr-47a445d1772250e5.exe
+env: NoDefaultCurrentDirectoryInExePath unset, sandboxed profile roots
+exit=0
+
+running 1 test
+test app::api::plugins::tests::windows_plugin_pane_commands_resolve_from_plugin_root_with_cwd_override ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 3386 filtered out; finished in 1.20s
+
+

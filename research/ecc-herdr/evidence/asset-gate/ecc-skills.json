@@ -1,0 +1,917 @@
+{
+  "root": "C:\\Herdr-dev\\ecc\\skills",
+  "decision": "review",
+  "reason": "needs human review: AGENT-SPAWNx57, CRED-PATHx8, DESTRUCTIVEx24, EXEC-INLINEx24, GLOBAL-CONFIGx25, OBFUSCATIONx2, PIPE-SHELLx2, PROMPT-WIDENx5",
+  "files_scanned": 599,
+  "files_skipped": 14,
+  "bytes_scanned": 4932985,
+  "executable_files": 131,
+  "instruction_files": 444,
+  "elapsed_ms": 4605.7,
+  "counts": {
+    "by_severity": {
+      "info": 636,
+      "low": 140,
+      "medium": 115,
+      "high": 32
+    },
+    "by_rule": {
+      "AGENT-SPAWN": 64,
+      "ASSET-INVENTORY": 344,
+      "ASSET-MODEL-PIN": 5,
+      "ASSET-NO-PROVENANCE": 27,
+      "ASSET-TOOLS": 12,
+      "CRED-PATH": 8,
+      "DESTRUCTIVE": 25,
+      "EXEC-INLINE": 24,
+      "GLOBAL-CONFIG": 27,
+      "NET-FETCH": 111,
+      "NET-URL": 267,
+      "OBFUSCATION": 2,
+      "PIPE-SHELL": 2,
+      "PROMPT-WIDEN": 5
+    }
+  },
+  "findings": [
+    {
+      "rule": "CRED-PATH",
+      "severity": "high",
+      "file": "docker-patterns/SKILL.md",
+      "message": "references a credential or SSH/key store path",
+      "line": 447,
+      "evidence": ".codex/<credential-file>",
+      "tags": [
+        "credentials"
+      ]
+    },
+    {
+      "rule": "CRED-PATH",
+      "severity": "high",
+      "file": "flutter-dart-code-review/SKILL.md",
+      "message": "references a credential or SSH/key store path",
+      "line": 268,
+      "evidence": "Keychain",
+      "tags": [
+        "credentials"
+      ]
+    },
+    {
+      "rule": "CRED-PATH",
+      "severity": "high",
+      "file": "gateguard/SKILL.md",
+      "message": "references a credential or SSH/key store path",
+      "line": 292,
+      "evidence": ".netrc",
+      "tags": [
+        "credentials"
+      ]
+    },
+    {
+      "rule": "CRED-PATH",
+      "severity": "high",
+      "file": "gateguard/SKILL.md",
+      "message": "references a credential or SSH/key store path",
+      "line": 293,
+      "evidence": "id_rsa",
+      "tags": [
+        "credentials"
+      ]
+    },
+    {
+      "rule": "CRED-PATH",
+      "severity": "high",
+      "file": "gateguard/SKILL.md",
+      "message": "references a credential or SSH/key store path",
+      "line": 294,
+      "evidence": "id_ecdsa",
+      "tags": [
+        "credentials"
+      ]
+    },
+    {
+      "rule": "CRED-PATH",
+      "severity": "high",
+      "file": "ito-compute/SKILL.md",
+      "message": "references a credential or SSH/key store path",
+      "line": 40,
+      "evidence": "Keychain",
+      "tags": [
+        "credentials"
+      ]
+    },
+    {
+      "rule": "CRED-PATH",
+      "severity": "high",
+      "file": "ito-compute/SKILL.md",
+      "message": "references a credential or SSH/key store path",
+      "line": 45,
+      "evidence": "Keychain",
+      "tags": [
+        "credentials"
+      ]
+    },
+    {
+      "rule": "CRED-PATH",
+      "severity": "high",
+      "file": "react-native-patterns/SKILL.md",
+      "message": "references a credential or SSH/key store path",
+      "line": 184,
+      "evidence": "Keychain",
+      "tags": [
+        "credentials"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "continuous-learning-v2/agents/session-guardian.sh",
+      "message": "destructive or guard-bypassing command",
+      "line": 78,
+      "evidence": "rm -rf ",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "continuous-learning-v2/agents/session-guardian.sh",
+      "message": "destructive or guard-bypassing command",
+      "line": 87,
+      "evidence": "rm -rf ",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "continuous-learning-v2/agents/session-guardian.sh",
+      "message": "destructive or guard-bypassing command",
+      "line": 99,
+      "evidence": "rm -rf ",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "frontend-slides/scripts/export-pdf.sh",
+      "message": "destructive or guard-bypassing command",
+      "line": 378,
+      "evidence": "rm -rf ",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "frontend-slides/scripts/export-pdf.sh",
+      "message": "destructive or guard-bypassing command",
+      "line": 386,
+      "evidence": "rm -rf ",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "frontend-slides/scripts/export-pdf.sh",
+      "message": "destructive or guard-bypassing command",
+      "line": 406,
+      "evidence": "rm -rf ",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "frontend-slides/scripts/export-pdf.sh",
+      "message": "destructive or guard-bypassing command",
+      "line": 412,
+      "evidence": "rm -rf ",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "gateguard/SKILL.md",
+      "message": "destructive or guard-bypassing command",
+      "line": 193,
+      "evidence": "git reset --hard",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "gateguard/SKILL.md",
+      "message": "destructive or guard-bypassing command",
+      "line": 596,
+      "evidence": "git reset --hard",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "generating-python-installer/SKILL.md",
+      "message": "destructive or guard-bypassing command",
+      "line": 349,
+      "evidence": "Remove-Item -Path $dir.FullName -Recurse -Force",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "generating-python-installer/SKILL.md",
+      "message": "destructive or guard-bypassing command",
+      "line": 364,
+      "evidence": "Remove-Item -Path $dir.FullName -Recurse -Force",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "generating-python-installer/SKILL.md",
+      "message": "destructive or guard-bypassing command",
+      "line": 379,
+      "evidence": "Remove-Item -Path $dir.FullName -Recurse -Force",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "git-workflow/SKILL.md",
+      "message": "destructive or guard-bypassing command",
+      "line": 205,
+      "evidence": "git push --force",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "git-workflow/SKILL.md",
+      "message": "destructive or guard-bypassing command",
+      "line": 605,
+      "evidence": "git reset --hard",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "git-workflow/SKILL.md",
+      "message": "destructive or guard-bypassing command",
+      "line": 684,
+      "evidence": "git push --force",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "hookify-rules/SKILL.md",
+      "message": "destructive or guard-bypassing command",
+      "line": 100,
+      "evidence": "rm -rf ",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "perl-security/SKILL.md",
+      "message": "destructive or guard-bypassing command",
+      "line": 179,
+      "evidence": "rm -rf ",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "repo-scan/SKILL.md",
+      "message": "destructive or guard-bypassing command",
+      "line": 39,
+      "evidence": "rm -rf ",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "rules-distill/scripts/scan-skills.sh",
+      "message": "destructive or guard-bypassing command",
+      "line": 61,
+      "evidence": "rm -rf ",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "safety-guard/SKILL.md",
+      "message": "destructive or guard-bypassing command",
+      "line": 3,
+      "evidence": "git push --force",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "safety-guard/SKILL.md",
+      "message": "destructive or guard-bypassing command",
+      "line": 27,
+      "evidence": "rm -rf ",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "safety-guard/SKILL.md",
+      "message": "destructive or guard-bypassing command",
+      "line": 28,
+      "evidence": "git push --force",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "safety-guard/SKILL.md",
+      "message": "destructive or guard-bypassing command",
+      "line": 29,
+      "evidence": "git reset --hard",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "high",
+      "file": "skill-stocktake/scripts/scan.sh",
+      "message": "destructive or guard-bypassing command",
+      "line": 101,
+      "evidence": "rm -rf ",
+      "tags": [
+        "destructive"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-agent-harness/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 100,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-agent-harness/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 123,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-agent-harness/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 129,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-agent-harness/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 217,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-agent-harness/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 223,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 15,
+      "evidence": "Claude Code autonomously in loops. Covers everything from simple `claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 43,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 49,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 58,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 61,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 64,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 67,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 72,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 82,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 85,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 88,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 95,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 102,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 105,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 112,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 125,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 223,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 224,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 228,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 280,
+      "evidence": "Claude reads this file at iteration start and updates it at iteration end. This bridges the context gap between independent `claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 286,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 343,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 346,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 361,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 364,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 367,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 370,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 577,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 580,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "autonomous-loops/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 591,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "continuous-learning-v2/agents/observer-loop.sh",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 399,
+      "evidence": "claude --model \"${ECC_OBSERVER_MODEL:-haiku}\" --max-turns \"$max_turns\" --print",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "dmux-workflows/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 154,
+      "evidence": "codex exec",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "gan-style-harness/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 31,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "gan-style-harness/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 182,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "gan-style-harness/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 185,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "gan-style-harness/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 188,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "gan-style-harness/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 191,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "plankton-code-quality/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 37,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "skill-comply/SKILL.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 14,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "skill-comply/prompts/scenario_generator.md",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 17,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "skill-comply/scripts/classifier.py",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 51,
+      "evidence": "claude\", \"-p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "skill-comply/scripts/runner.py",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 1,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "medium",
+      "file": "skill-comply/scripts/runner.py",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 53,
+      "evidence": "claude\", \"-p",
+      "tags": [
+        "orchestration"
+      ]
+    }
+  ]
+}

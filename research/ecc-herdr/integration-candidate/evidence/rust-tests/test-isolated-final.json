@@ -1,0 +1,41 @@
+{
+  "binaries": {
+    "ghostty_vt": 56,
+    "server_headless": 0,
+    "auto_detect": 0,
+    "client_mode": 0,
+    "session_restore": 0,
+    "live_handoff": 0,
+    "detach_reattach": 0,
+    "multi_client": 0,
+    "session_delete": 5,
+    "broken_pipe": 0,
+    "cross_area": 0,
+    "remote_attach": 0,
+    "machine_api": 0,
+    "windows_server_security": 1,
+    "cli": 0,
+    "machine_setup": 0,
+    "api_ping": 0,
+    "host_shutdown": 0,
+    "herdr": 3387
+  },
+  "tests_run": 3449,
+  "counts": {
+    "pass": 3448,
+    "fail": 1,
+    "timeout": 0
+  },
+  "elapsed_seconds": 99.0,
+  "jobs": 16,
+  "failures": [
+    {
+      "binary": "herdr",
+      "test": "app::api::plugins::tests::windows_plugin_pane_commands_resolve_from_plugin_root_with_cwd_override",
+      "status": "fail",
+      "exit": 101,
+      "seconds": 6.481,
+      "output_tail": ".50.0\\src\\runtime\\context.rs:176:38\n  15: std::thread::local::LocalKey<T>::try_with\n             at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library\\std\\src\\thread\\local.rs:462:12\n  16: std::thread::local::LocalKey<T>::with\n             at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library\\std\\src\\thread\\local.rs:426:20\n  17: tokio::runtime::context::set_scheduler\n             at C:\\Herdr-dev\\toolchain\\cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.50.0\\src\\runtime\\context.rs:176:17\n  18: tokio::runtime::scheduler::current_thread::CoreGuard::enter\n             at C:\\Herdr-dev\\toolchain\\cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.50.0\\src\\runtime\\scheduler\\current_thread\\mod.rs:856:27\n  19: tokio::runtime::scheduler::current_thread::CoreGuard::block_on\n             at C:\\Herdr-dev\\toolchain\\cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.50.0\\src\\runtime\\scheduler\\current_thread\\mod.rs:756:24\n  20: tokio::runtime::scheduler::current_thread::CurrentThread::block_on::{{closure}}\n             at C:\\Herdr-dev\\toolchain\\cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.50.0\\src\\runtime\\scheduler\\current_thread\\mod.rs:200:33\n  21: tokio::runtime::context::runtime::enter_runtime\n             at C:\\Herdr-dev\\toolchain\\cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.50.0\\src\\runtime\\context\\runtime.rs:65:16\n  22: tokio::runtime::scheduler::current_thread::CurrentThread::block_on\n             at C:\\Herdr-dev\\toolchain\\cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.50.0\\src\\runtime\\scheduler\\current_thread\\mod.rs:188:9\n  23: tokio::runtime::runtime::Runtime::block_on_inner\n             at C:\\Herdr-dev\\toolchain\\cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.50.0\\src\\runtime\\runtime.rs:371:52\n  24: tokio::runtime::runtime::Runtime::block_on\n             at C:\\Herdr-dev\\toolchain\\cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.50.0\\src\\runtime\\runtime.rs:345:18\n  25: herdr::app::api::plugins::tests::windows_plugin_pane_commands_resolve_from_plugin_root_with_cwd_override\n             at .\\src\\app\\api\\plugins\\mod.rs:1792:14\n  26: herdr::app::api::plugins::tests::windows_plugin_pane_commands_resolve_from_plugin_root_with_cwd_override::{{closure}}\n             at .\\src\\app\\api\\plugins\\mod.rs:1640:87\n  27: core::ops::function::FnOnce::call_once\n             at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library\\core\\src\\ops\\function.rs:250:5\n  28: <fn() -> core::result::Result<(), alloc::string::String> as core::ops::function::FnOnce<()>>::call_once\n             at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library\\core\\src\\ops/function.rs:250:5\nnote: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.\n\n\nfailures:\n    app::api::plugins::tests::windows_plugin_pane_commands_resolve_from_plugin_root_with_cwd_override\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3386 filtered out; finished in 6.22s\n\n"
+    }
+  ]
+}

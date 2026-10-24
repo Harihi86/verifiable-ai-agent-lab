@@ -1,0 +1,11 @@
+........................................................................................Falling back to direct application...
+Applied patch to 'Cargo.lock' cleanly.
+Applied patch to 'Cargo.toml' cleanly.
+.........sssss................................................
+----------------------------------------------------------------------
+Ran 150 tests in 48.626s
+
+OK (skipped=5)
+Windows SDK configured at <USERPROFILE>\AppData\Local\Temp\tmpae5sg9gu\libc.txt. Run `just windows-lint` or `just check`.
+Windows SDK configured at <USERPROFILE>\AppData\Local\Temp\tmpae5sg9gu\libc.txt. Run `just windows-lint` or `just check`.
+exit=0

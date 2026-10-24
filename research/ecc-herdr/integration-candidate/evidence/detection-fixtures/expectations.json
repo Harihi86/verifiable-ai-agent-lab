@@ -1,0 +1,10 @@
+{
+  "_comment": "Captured terminal screens (herdr agent read --source visible) from supervised real-agent runs on 2026-10-24. Each entry is classified with `herdr agent explain --file <screen> --agent <agent> --json` by ../test_fixtures.py when HERDR_TEST_BINARY points at a built binary. File mode has no OSC title/progress input, so idle expectations rely on visible footer rules.",
+  "fixtures": [
+    {"file": "grok-1.0.67-trust-dialog.txt", "agent": "grok", "agent_version": "1.0.67", "expect_state": "blocked", "note": "centered directory-trust dialog; before the 2026.10.24.1 manifest this classified as idle via the OSC title and a prompt was typed into the dialog"},
+    {"file": "grok-1.0.67-idle-after-turn.txt", "agent": "grok", "agent_version": "1.0.67", "expect_state": "idle", "note": "footer reads 'Ctrl+x:shortcuts' (older builds: 'Ctrl+.:shortcuts')"},
+    {"file": "codex-0.163-trust-dialog.txt", "agent": "codex", "agent_version": "0.163.0-alpha.11.2", "expect_state": "blocked", "note": "'Folder access / Trust this folder?' dialog; the bundled trust_directory rule already matched it"},
+    {"file": "codex-0.163-idle-after-turn.txt", "agent": "codex", "agent_version": "0.163.0-alpha.11.2", "expect_state": null, "note": "idle came from the OSC title in the live run; file mode has no visible idle rule for Codex, so no state is asserted (recorded for drift tracking)"},
+    {"file": "codex-0.163-ratelimit-model-picker.txt", "agent": "codex", "agent_version": "0.163.0-alpha.11.2", "expect_state": "blocked", "note": "'Approaching rate limits' model-switch picker shown after a completed turn; Enter selects the highlighted 'Switch to ...' choice. Before codex manifest 2026.10.24.1 it classified as idle (default fallback; the live OSC title also reads idle), so a prompt would have been typed into the picker"}
+  ]
+}

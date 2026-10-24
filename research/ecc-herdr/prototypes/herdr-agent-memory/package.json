@@ -1,0 +1,13 @@
+{
+  "name": "herdr-agent-memory-research",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Research prototype: Herdr plugin providing a cross-agent per-project session memory vault (adapted from ECC memory vault, MIT)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test \"tests/**/*.test.js\""
+  }
+}

@@ -128,6 +128,13 @@ The state store supports one active attempt per task. Multi-host dispatch,
 concurrent worker recovery, live AI adapters, review disagreement analysis and
 benchmark scores are **planned**, not implemented.
 
+## Research tracks
+
+[`research/`](research/README.md) holds sanitized research material that informs the lab without being part of the
+package or its CI. The first track, [ECC × Herdr](research/ecc-herdr/README.md), evaluates an agent-harness project
+against a terminal agent runtime and labels every artifact by verification class (research finding, tested prototype,
+offline verification, real-agent verification, proposed integration). The lab itself has no dependency on either system.
+
 ## Roadmap, references and license
 
 [Prioritized milestones](ROADMAP.md) define acceptance criteria and verification.

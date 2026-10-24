@@ -1,0 +1,218 @@
+{
+  "root": "C:\\Herdr-dev\\ecc\\scripts\\hooks",
+  "decision": "review",
+  "reason": "needs human review: CRED-PATHx1, GLOBAL-CONFIGx2",
+  "files_scanned": 61,
+  "files_skipped": 0,
+  "bytes_scanned": 580669,
+  "executable_files": 61,
+  "instruction_files": 0,
+  "elapsed_ms": 517.1,
+  "counts": {
+    "by_severity": {
+      "info": 12,
+      "medium": 2,
+      "high": 1,
+      "low": 1
+    },
+    "by_rule": {
+      "AGENT-SPAWN": 1,
+      "CRED-PATH": 1,
+      "DESTRUCTIVE": 1,
+      "EXEC-INLINE": 4,
+      "GLOBAL-CONFIG": 5,
+      "NET-FETCH": 1,
+      "NET-URL": 3
+    }
+  },
+  "findings": [
+    {
+      "rule": "CRED-PATH",
+      "severity": "high",
+      "file": "governance-capture.js",
+      "message": "references a credential or SSH/key store path",
+      "line": 65,
+      "evidence": "id_rsa",
+      "tags": [
+        "credentials"
+      ]
+    },
+    {
+      "rule": "GLOBAL-CONFIG",
+      "severity": "medium",
+      "file": "block-no-verify.js",
+      "message": "writes or targets user-global agent or system configuration",
+      "line": 30,
+      "evidence": "core.hookspath",
+      "tags": [
+        "global-config"
+      ]
+    },
+    {
+      "rule": "GLOBAL-CONFIG",
+      "severity": "medium",
+      "file": "block-no-verify.js",
+      "message": "writes or targets user-global agent or system configuration",
+      "line": 271,
+      "evidence": "core.hooksPath",
+      "tags": [
+        "global-config"
+      ]
+    },
+    {
+      "rule": "NET-FETCH",
+      "severity": "low",
+      "file": "plan-canvas-pending.js",
+      "message": "outbound network call",
+      "line": 121,
+      "evidence": "http.request(",
+      "tags": [
+        "network"
+      ]
+    },
+    {
+      "rule": "AGENT-SPAWN",
+      "severity": "info",
+      "file": "session-end.js",
+      "message": "drives another coding-agent CLI directly (competing controller / token spend)",
+      "line": 210,
+      "evidence": "claude -p",
+      "tags": [
+        "orchestration",
+        "definitional"
+      ]
+    },
+    {
+      "rule": "DESTRUCTIVE",
+      "severity": "info",
+      "file": "gateguard-fact-force.js",
+      "message": "destructive or guard-bypassing command",
+      "line": 249,
+      "evidence": "rm -rf ",
+      "tags": [
+        "destructive",
+        "definitional"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "info",
+      "file": "gateguard-fact-force.js",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 911,
+      "evidence": "sh -c",
+      "tags": [
+        "exec",
+        "definitional"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "info",
+      "file": "gateguard-fact-force.js",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 1401,
+      "evidence": "bash -c",
+      "tags": [
+        "exec",
+        "definitional"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "info",
+      "file": "plugin-hook-bootstrap.js",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 319,
+      "evidence": "node -e",
+      "tags": [
+        "exec",
+        "definitional"
+      ]
+    },
+    {
+      "rule": "EXEC-INLINE",
+      "severity": "info",
+      "file": "session-start-bootstrap.js",
+      "message": "inline code execution through a shell or interpreter flag",
+      "line": 10,
+      "evidence": "node -e",
+      "tags": [
+        "exec",
+        "definitional"
+      ]
+    },
+    {
+      "rule": "GLOBAL-CONFIG",
+      "severity": "info",
+      "file": "block-no-verify.js",
+      "message": "writes or targets user-global agent or system configuration",
+      "line": 5,
+      "evidence": "core.hooksPath",
+      "tags": [
+        "global-config",
+        "definitional"
+      ]
+    },
+    {
+      "rule": "GLOBAL-CONFIG",
+      "severity": "info",
+      "file": "block-no-verify.js",
+      "message": "writes or targets user-global agent or system configuration",
+      "line": 24,
+      "evidence": "core.hooksPath",
+      "tags": [
+        "global-config",
+        "definitional"
+      ]
+    },
+    {
+      "rule": "GLOBAL-CONFIG",
+      "severity": "info",
+      "file": "mcp-health-check.js",
+      "message": "writes or targets user-global agent or system configuration",
+      "line": 564,
+      "evidence": "~/.claude/settings.json",
+      "tags": [
+        "global-config",
+        "definitional"
+      ]
+    },
+    {
+      "rule": "NET-URL",
+      "severity": "info",
+      "file": "block-no-verify.js",
+      "message": "URL literal",
+      "line": 26,
+      "evidence": "https://git-scm.com/docs/git-config",
+      "tags": [
+        "network",
+        "definitional"
+      ]
+    },
+    {
+      "rule": "NET-URL",
+      "severity": "info",
+      "file": "cost-tracker.js",
+      "message": "URL literal",
+      "line": 80,
+      "evidence": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "tags": [
+        "network",
+        "definitional"
+      ]
+    },
+    {
+      "rule": "NET-URL",
+      "severity": "info",
+      "file": "cursor-session-env.js",
+      "message": "URL literal",
+      "line": 6,
+      "evidence": "https://cursor.com/docs/hooks",
+      "tags": [
+        "network",
+        "definitional"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "root": "C:\\Herdr-dev\\prototypes\\herdr-agent-memory",
+  "decision": "allow",
+  "reason": "only informational or low findings",
+  "files_scanned": 18,
+  "files_skipped": 0,
+  "bytes_scanned": 75052,
+  "executable_files": 15,
+  "instruction_files": 1,
+  "elapsed_ms": 67.2,
+  "counts": {
+    "by_severity": {
+      "info": 2,
+      "low": 8
+    },
+    "by_rule": {
+      "MANIFEST-EVENT-CARDINALITY": 1,
+      "MANIFEST-INVENTORY": 1,
+      "NET-FETCH": 1,
+      "SECRET-LITERAL": 7
+    }
+  },
+  "findings": [
+    {
+      "rule": "NET-FETCH",
+      "severity": "low",
+      "file": "src/lib/herdr-client.js",
+      "message": "outbound network call",
+      "line": 68,
+      "evidence": "net.connect(",
+      "tags": [
+        "network"
+      ]
+    },
+    {
+      "rule": "SECRET-LITERAL",
+      "severity": "low",
+      "file": "tests/capture.test.js",
+      "message": "possible provider API key literal",
+      "line": 101,
+      "evidence": "sk-abcdefghi...",
+      "tags": [
+        "secret",
+        "test-fixture-capped"
+      ]
+    },
+    {
+      "rule": "SECRET-LITERAL",
+      "severity": "low",
+      "file": "tests/fixtures/fake-herdr.js",
+      "message": "possible GitHub token literal",
+      "line": 25,
+      "evidence": "ghp_ABCDEFGH...",
+      "tags": [
+        "secret",
+        "test-fixture-capped"
+      ]
+    },
+    {
+      "rule": "SECRET-LITERAL",
+      "severity": "low",
+      "file": "tests/summarize.test.js",
+      "message": "possible GitHub token literal",
+      "line": 13,
+      "evidence": "ghp_ABCDEFGH...",
+      "tags": [
+        "secret",
+        "test-fixture-capped"
+      ]
+    },
+    {
+      "rule": "SECRET-LITERAL",
+      "severity": "low",
+      "file": "tests/vault-format.test.js",
+      "message": "possible GitHub token literal",
+      "line": 61,
+      "evidence": "ghp_ABCDEFGH...",
+      "tags": [
+        "secret",
+        "test-fixture-capped"
+      ]
+    },
+    {
+      "rule": "SECRET-LITERAL",
+      "severity": "low",
+      "file": "tests/vault-format.test.js",
+      "message": "possible AWS access key literal",
+      "line": 61,
+      "evidence": "AKIAABCDEFGH...",
+      "tags": [
+        "secret",
+        "test-fixture-capped"
+      ]
+    },
+    {
+      "rule": "SECRET-LITERAL",
+      "severity": "low",
+      "file": "tests/vault-format.test.js",
+      "message": "possible private key literal",
+      "line": 61,
+      "evidence": "-----BEGIN R...",
+      "tags": [
+        "secret",
+        "test-fixture-capped"
+      ]
+    },
+    {
+      "rule": "SECRET-LITERAL",
+      "severity": "low",
+      "file": "tests/vault-store.test.js",
+      "message": "possible provider API key literal",
+      "line": 59,
+      "evidence": "sk-abcdefghi...",
+      "tags": [
+        "secret",
+        "test-fixture-capped"
+      ]
+    },
+    {
+      "rule": "MANIFEST-EVENT-CARDINALITY",
+      "severity": "info",
+      "file": "herdr-plugin.toml",
+      "message": "event hook on 'pane.agent_status_changed' spawns a process per event; budget it",
+      "line": null,
+      "evidence": "",
+      "tags": [
+        "performance"
+      ]
+    },
+    {
+      "rule": "MANIFEST-INVENTORY",
+      "severity": "info",
+      "file": "herdr-plugin.toml",
+      "message": "plugin 'research.agent-memory' v0.1.0 min_herdr 0.9.5: build=0, startup=0, events=1, actions=3, panes=0",
+      "line": null,
+      "evidence": "",
+      "tags": []
+    }
+  ]
+}
